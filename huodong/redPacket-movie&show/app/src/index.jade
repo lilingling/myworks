@@ -1,0 +1,91 @@
+extends ../tmp/jade/base
+
+block title
+	title 微票儿超级红包日
+block append content 
+	.wrapper#wrapper
+		div.download-app
+			img.logo_piao(src="images/logo_piao.png")
+			p.download-info
+				b 微票儿
+				small(style="line-height:1.6;") 微信QQ电影演出票官方应用
+				small(style="color:rgba(255,0,0,.8)") 下载新版微票儿客户端参与活动
+			span
+				a.btn(href="http://promotion.wepiao.com/down/mobilelist/download.html") 立即下载
+		header
+			img(src="images/banner.jpg")
+		section.main
+			a.buy-button#buy_button(href="http://promotion.wepiao.com/down/mobilelist/download.html")
+			span.time.font22.ffe900.bb-1 活动时间：12月14日-12月21日
+			span.msg 本活动仅限微票儿最新版5.2参加
+			.content
+				.top-movie.mt-30
+					img.line.mr-5(src="images/line.png")
+					span.title 热门影片
+					img.line.ml-5(src="images/line.png")
+					.swiper-container
+						.swiper-wrapper
+							.swiper-slide#s1(style="background-image:url(./images/movie-1.jpg)")
+							.swiper-slide#s2(style="background-image:url(./images/movie-2.png)")
+							.swiper-slide#s3(style="background-image:url(./images/movie-3.png)")
+							.swiper-slide#s4(style="background-image:url(./images/movie-4.png)")
+							.swiper-slide#s5(style="background-image:url(./images/movie-5.png)")
+						.swiper-pagination
+					a.more-movie.font22.ffe900.mt-25(href="wxmovie://movielist?type=1") 更多精彩影片
+				.hot-show.mt-30
+					img.line.mr-5(src="images/line.png")
+					span.title(style="position:relative;z-index:999") 最HOT演出
+					img.line.ml-5(src="images/line.png")
+					ul.tab.mt-20#tab
+						li.tab1.mr-12.animation
+							span
+						li.tab2.mr-12.animation
+							span.hide
+						li.tab3.animation
+							span.hide
+					.show-list-wrapper#show-list-wrapper
+					a.more-show.font22.ffe900.mt-20(href="wxmovie://show/list?id=hot") 更多精彩演出 就在您身边
+				.showList-mask
+				.tips.mt-30.font22
+					h2.bb-25063A 温馨提示
+					ol.movie-bonus
+						span【电影红包】
+						li 红包仅限购买微票儿电影票使用，单个红包只能在对应有效期内用于列表内5部影片购票时使用，可用
+							i.movie-list-butn.ffe900.bb-1 影片列表
+						li 红包可在支付时抵用现金立减，支持35元（含）以上场次使用，不与其他优惠叠加使用
+					ol.show-bonus
+						span【演出红包】
+						li 红包仅限购买微票儿演出票使用，仅限购买150元以上演出票使用
+						li 红包请登录微票儿客户端-我的-红包-演出红包中查看
+						li 红包仅限每单使用一次，不可兑换现金，不可与其他优惠同时使用
+					ul.other-tips
+						li 
+							img.square(src="images/square.png")
+							span 活动期间每人限领1套，同一账号、设备号、手机号、将视为同一用户
+						li 
+							img.square(src="images/square.png")
+							span 单个红包有效期不同，请注意查看并在有效期内使用
+						li 
+							img.square(src="images/square.png")
+							span 红包限微票儿客户端5.2以上版本使用，如遇红包无法领取，请点此
+								a.download(href="http://promotion.wepiao.com/down/mobilelist/download.html") 下载最新版
+						li 
+							img.square(src="images/square.png")
+							span 在参加活动过程中，如果出现作弊行为（如批量注册、恶意购买、虚假分享、虚假交易等），微票儿将自动取消您本次活动机会，并有权取消您后续参与微票儿任意活动的权利，必要时追究法律责任
+		footer
+			img.logo(src="images/logo.png")
+		div.movieList-mask
+			ul.movie-list
+				a.close#closeButn2(href="javascript:;") X
+				h2 可用影片
+				li 《师父》
+				li 《寻龙诀》
+				li 《万万没想到：西游篇》
+				li 《老炮儿》
+				li 《恶棍天使》
+
+
+
+
+			
+			

@@ -1,0 +1,349 @@
+/*-------public css start--- */
+sub, sup {
+    line-height: 0;
+}
+body, h1, h2, h3, h4, h5, h6, dl, dt, dd, ul, ol, li, th, td, p, blockquote, pre, form, fieldset, legend, input, button, textarea, hr {
+    margin: 0;
+    padding: 0;
+}img
+ table {
+     border-spacing: 0;
+     border-collapse: collapse;
+ }
+fieldset, img {
+    border: 0;
+}
+input, textarea {
+    outline-style: none;
+}
+textarea {
+    resize: none;
+}
+address, caption, cite, code, dfn, em, i, th, var {
+    font-weight: normal;
+    font-style: normal;
+}
+html, body {
+    overflow: hidden;
+    height: 100%;
+}
+body {
+    font-size: 62.5%;
+    background-color: #060606;
+}
+ul li{list-style: none;}
+.clear{clear:both}
+/*-------public css end--- */
+a{-webkit-tap-highlight-color:rgba(0,0,0,.0);}
+img{
+    display: block;
+    width:100%;}
+.mask{position:fixed;
+    z-index:999;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0}
+.mask-loading,.loading{background-color:#fff}
+.loading{width:100%;
+    height:100%;
+    background-size:cover
+}
+.icon-loading{position:absolute;
+    top:19.6%;
+    left:31.5%;
+    width:40.6%
+}
+.text-loading{
+    font-size:1rem;
+    position:absolute;
+    top:48.3%;
+    width:100%;
+    height:3%;
+    text-align:center;
+    color:#887f7f
+}
+.orientation_set{display:none}
+@media screen and (orientation:landscape) {
+    .orientation_set {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        color: #fff;
+        width: 100%;
+        height: 100%;
+        background: #397ddb;
+        text-align: center;
+        display: -webkit-box;
+        -weibit-box-pack: center;
+        -webkit-box-align: center;
+        z-index: 999;
+        font-size: 14px;
+        line-height: 2em;
+        font-family: "Microsoft YaHei";
+        /*margin:0 auto;*/
+    }
+}
+.startButton{
+    position: absolute;
+    top: 59.5%;
+    right:11.4%;
+    width:29.2%;
+    -webkit-animation-name: butnClick;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count:infinite ;
+    z-index: 1;
+}
+.p1-text-01{
+    position: absolute;
+    bottom:1%;
+    left:8.2%;
+    width:85.5%;
+}
+
+#p2{
+    position: relative;
+    top:100%;
+    width:100%;
+    height:100%;
+    background-color: #74c5df;
+    z-index: 2;
+}
+#header{
+    width:100%;
+    height:12.2%;
+    padding-top:3.5%;
+}
+.number_box{
+    position: relative;
+    height:100%;
+    margin:0 auto;
+    text-align: center;
+}
+.number_box img{
+    height: 100%;
+    width: auto;
+    display: inline-block;
+}
+.num{
+    position: absolute;
+    -webkit-transform: translate3d(-100%,0,0)
+}
+h1{
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "黑体";
+    color:#fff;
+    line-height: 2.4;
+    text-align: center;
+}
+ul{
+    width:90.8%;
+    /*height:49.5%;*/
+    margin:0 auto;
+}
+ul li{
+    width:48%;
+    /*border-radius:24%;*/
+    border:0;
+    float:left;
+    background-repeat: no-repeat;
+    background-size: 200%;
+}
+ul li.option1{background-position: 0 0; margin-right: 2%;}
+ul li.option2{background-position: right 0; }
+ul li.option3{background-position: 0 bottom; margin-right: 2%;margin-top:2%;}
+ul li.option4{background-position: right bottom; margin-top:2%;}
+ul li img{
+    width:100%;
+    border-radius: 50%;
+    border: 3px transparent solid;
+    box-sizing: border-box;
+}
+ul li.other img{
+    background: rgba(0,0,0,0.2);
+}
+ul li.current img{
+    border: 3px #e8a625 solid;
+    -webkit-box-shadow: 0 0 31px rgba(255, 255, 190, .75);
+}
+ul li.bling{
+    -webkit-animation-name: bling;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-duration: 0.2s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count:1 ;
+}
+.answer{
+    text-align: center;
+    font-family: "黑体";
+    color: #b82020;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.5;
+}
+.answer i{
+    display: inline-block; width: 6%;
+    vertical-align: middle;
+    margin-right: -5px;
+}
+.answerBlock{
+    height: 8%
+}
+#msg-correct span{
+    color: #3ab12a;
+}
+.stepBtn{
+    display: block;
+    width: 62.5%;
+    height: 7%;
+    margin: 0 auto;
+}
+.stepBtn.disabled{
+    opacity: .4;
+}
+
+#p3{
+     position: relative;
+     top:100%;
+     width:100%;
+     height:100%;
+    z-index: 2;
+     /*background-image: url("images/p11.jpg");*/
+     /*background-position: top center;*/
+     /*background-repeat: no-repeat;*/
+     /*background-size: contain;*/
+ }
+.logo{
+    position: absolute;
+    width: 100%;
+    height: 10.5%;
+    bottom: 0;
+    right: 0%;
+}
+.buyButn{
+    position: absolute;
+    bottom: 14%;
+    right: 15%;
+    width: 62.7%;
+    height: 7%;
+}
+#p4{
+    position: relative;
+    top:100%;
+    width:100%;
+    height:100%;
+    /*background-image: url("images/p11.jpg");*/
+    /*background-position: top center;*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: contain;*/
+}
+#result{
+    position: absolute;
+    top: 28.1%;
+    left: 14.7%;
+    width: 46.6%;
+    height: 22.3%;
+}
+#result h2{
+    color: #fff;
+    font-size: 1.2rem;
+    font-family: "黑体";
+    font-weight: normal;
+    line-height: 2.4;
+}
+.logo{
+    position: absolute;
+    width: 100%;
+    height: 10.5%;
+    bottom: 0;
+    right: 0%;
+}
+#restartButn {
+    width: 90.6%;
+    display: block;
+}
+#p4 h1{
+    position: absolute;
+    color: #fff;
+    bottom: 21%;
+    left: 26%;
+    font-size: 1.4rem;
+}
+#wrong{
+    display:none;
+}
+
+@-webkit-keyframes bling {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes butnClick {
+    0%{
+        -webkit-transform:translateY(0);
+    }
+    50%{
+        -webkit-transform:translateY(-8%);
+    }
+    100%{
+        -webkit-transform:translateY(0);
+    }
+}
+/*iphone4/4s*/
+@media only screen and (min-device-height: 416px) and (max-device-height: 480px) {
+    .p1-text-01 img{
+        width:70%;
+    }
+    .p1-text-01{
+        left:19.2%;
+    }
+    #startButton{
+        top:69.5%;
+        width:25.2%;
+    }
+    ul#optionWrap{
+        width:73.8% ;
+    }
+    .answer{font-size:1rem;}
+    .slogan{
+        font-size: 1rem;
+        right:20%;
+    }
+}
+/*魅族*/
+@media only screen and (min-device-width:384px){
+    .p1-text-01 img{
+        width:80%;
+    }
+    .p1-text-01{
+        left:14.2%;
+    }
+    #startButton{
+        top:69.5%;
+        width:26.2%;
+    }
+    ul{
+        width:81.8%;
+    }
+    .answer{font-size:1.2rem;}
+}
+.slogan{
+    color:#fff;
+    font-size: 1.2rem;
+    font-weight:bold;
+    font-family: "黑体";
+    position: absolute;
+    bottom: 23%;
+    right: 12%;
+}

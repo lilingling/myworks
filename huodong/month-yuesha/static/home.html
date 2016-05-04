@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- meta-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="address=no">
+	<!--link(rel="icon", type="image/png", href="/favicon.ico")-->
+	<!-- 标题-->
+	<title>8月约啥</title>
+	<!-- 默认样式-->
+	<link rel="stylesheet" type="text/css" href="./css/reset.css">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<!-- 默认脚本-->
+	<script src="./script/zepto.min.js"></script>
+	<script src="./script/wx.js"></script>
+	<script src="./script/wxbridge.js"></script>
+</head>
+<body>
+	<div class="mask_loading">
+		<div class="loading">
+			<img src="images/loading.gif" class="icon-loading"> <i class="text-loading">约么？</i>
+		</div>
+	</div>
+	<div class="orientation_set">
+		<div>
+			<img src="images/orientation.png">
+			<span>请将屏幕竖向浏览</span>
+		</div>
+	</div>
+	<div id="slide">
+		<img id="weixinShareImg" src="images/share.jpg">
+		<section id="scene_1" class="scene cover_bg">
+			<div class="box">
+				<div class="inner-box">
+					<img src="images/cover-text-01.png">
+					<img src="images/cover-text-02.png" class="p1-text-02 show">
+					<div class="xiaopiao">
+						<img src="images/xiaopiao.png"></div>
+					<div class="xiaopiao-1">
+						<img src="images/xiaopiao-1.png"></div>
+				</div>
+			</div>
+			<div class="cover-text-03">
+				<img src="images/cover-text-03.png"></div>
+			<div class="curl"></div>
+			<div class="slide-arrow">
+				<img src="images/arrow.png"></div>
+		</section>
+		<section id="scene_2" class="scene lead_bg">
+			<div class="slide-arrow">
+				<img src="images/arrow.png"></div>
+		</section>
+		<section id="scene_3" class="scene firstScene p1_bg">
+			<div class="logo logo1">
+				<img src="images/logo-blank.png"></div>
+			<type class="type type1">
+				<img src="images/type_blank.png"></type>
+			<div class="show text1">
+				<img src="images/text1.png"></div>
+			<div class="bottom-pic bottom-pic1">
+				<img src="images/bottom-blank.png"></div>
+			<a href="http://wx.wepiao.com/movie_detail.html?movie_id=" class="detailButn detailButn1">
+				<img src="images/detailButton_blank.png"></a>
+			<div class="slide-arrow">
+				<img src="images/arrow.png"></div>
+		</section>
+		<section id="scene_4" class="scene p2_bg">
+			<div class="logo logo2">
+				<img src="images/logo-blank.png"></div>
+			<type class="type type2">
+				<img src="images/type_blank.png"></type>
+			<div class="show text2">
+				<img src="images/text2.png"></div>
+			<div class="bottom-pic bottom-pic2">
+				<img src="images/bottom-blank.png"></div>
+			<a href="http://wx.wepiao.com/movie_detail.html?movie_id=" class="detailButn detailButn2">
+				<img src="images/detailButton_blank.png"></a>
+			<div class="slide-arrow">
+				<img src="images/arrow.png"></div>
+		</section>
+		<section id="scene_5" class="scene p3_bg">
+			<div class="logo logo3">
+				<img src="images/logo-blank.png"></div>
+			<type class="type type3">
+				<img src="images/type_blank.png"></type>
+			<div class="show text3">
+				<img src="images/text3.png"></div>
+			<div class="bottom-pic bottom-pic3">
+				<img src="images/bottom-blank.png"></div>
+			<a href="http://wx.wepiao.com/movie_detail.html?movie_id=" class="detailButn detailButn3">
+				<img src="images/detailButton_blank.png"></a>
+			<div class="slide-arrow">
+				<img src="images/arrow.png"></div>
+		</section>
+		<section id="scene_6" class="scene p4_bg">
+			<div class="logo logo4">
+				<img src="images/logo-blank.png"></div>
+			<type class="type type4">
+				<img src="images/type_blank.png"></type>
+			<div class="show text4">
+				<img src="images/text4.png"></div>
+			<div class="bottom-pic bottom-pic4">
+				<img src="images/bottom-blank.png"></div>
+			<a href="http://wx.wepiao.com/movie_detail.html?movie_id=" class="detailButn detailButn4">
+				<img src="images/detailButton_blank.png"></a>
+			<div class="slide-arrow">
+				<img src="images/arrow.png"></div>
+		</section>
+		<section id="scene_7" class="scene p5_bg">
+			<div class="logo logo5">
+				<img src="images/logo-blank.png"></div>
+			<type class="type type5">
+				<img src="images/type_blank.png"></type>
+			<div class="show text5">
+				<img src="images/text5.png"></div>
+			<div class="bottom-pic bottom-pic5">
+				<img src="images/bottom-blank.png"></div>
+			<a href="http://wx.wepiao.com/movie_detail.html?movie_id=" class="detailButn detailButn5">
+				<img src="images/detailButton_blank.png"></a>
+			<div class="slide-arrow">
+				<img src="images/arrow.png"></div>
+		</section>
+		<section id="scene_8" class="scene p6_bg">
+			<div class="logo logo6">
+				<img src="images/logo-blank.png"></div>
+			<type class="type type6">
+				<img src="images/type_blank.png"></type>
+			<div class="show text6">
+				<img src="images/text6.png"></div>
+			<div class="bottom-pic bottom-pic6">
+				<img src="images/bottom-blank.png"></div>
+			<a href="http://wx.wepiao.com/movie_detail.html?movie_id=" class="detailButn detailButn6">
+				<img src="images/detailButton_blank.png"></a>
+			<div class="slide-arrow">
+				<img src="images/arrow.png"></div>
+		</section>
+		<section id="scene_9" class="scene p7_bg">
+			<div class="logo logo7">
+				<img src="images/logo-blank.png"></div>
+			<type class="type type7">
+				<img src="images/type_blank.png"></type>
+			<div class="show text7">
+				<img src="images/text7.png"></div>
+			<div class="bottom-pic bottom-pic7">
+				<img src="images/bottom-blank.png"></div>
+			<a href="http://wx.wepiao.com/movie_detail.html?movie_id=" class="detailButn detailButn7">
+				<img src="images/detailButton_blank.png"></a>
+			<div class="slide-arrow">
+				<img src="images/arrow.png"></div>
+		</section>
+		<section id="scene_10" class="scene p8_bg">
+			<div class="logo logo8">
+				<img src="images/logo-blank.png"></div>
+			<type class="type type8">
+				<img src="images/type_blank.png"></type>
+			<div class="show text8">
+				<img src="images/text8.png"></div>
+			<div class="bottom-pic bottom-pic8">
+				<img src="images/bottom-blank.png"></div>
+			<a href="http://wx.wepiao.com/movie_detail.html?movie_id=" class="detailButn detailButn8">
+				<img src="images/detailButton_blank.png"></a>
+			<div class="slide-arrow">
+				<img src="images/arrow.png"></div>
+		</section>
+		<section id="scene_11" class="scene p9_bg">
+			<div class="logo logo9">
+				<img src="images/logo-blank.png"></div>
+			<type class="type type9">
+				<img src="images/type_blank.png"></type>
+			<div class="show text9">
+				<img src="images/text9.png"></div>
+			<div class="bottom-pic bottom-pic9">
+				<img src="images/bottom-blank.png"></div>
+			<a href="http://wx.wepiao.com/movie_detail.html?movie_id=" class="detailButn detailButn9">
+				<img src="images/detailButton_blank.png"></a>
+			<div class="slide-arrow">
+				<img src="images/arrow.png"></div>
+		</section>
+		<section id="scene_12" class="scene p10_bg">
+			<a href="#" class="buyButn">
+				<img src="images/buyButn.png"></a>
+		</section>
+		<section id="scene_13" class="scene end_bg">
+			<div class="end_pic01">
+				<img src="images/end_pic01.png"></div>
+			<a href="#" class="ticketButn ticketButn1">
+				<img src="images/ticketButn1.png"></a>
+			<a href="#" class="ticketButn ticketButn2">
+				<img src="images/ticketButn2.png"></a>
+			<div class="end_pic02">
+				<img src="images/end_pic02.png"></div>
+			<div class="end_pic03">
+				<img src="images/erwema.jpg" class="erweima">
+				<img src="images/end_pic03.png"></div>
+		</section>
+	</div>
+	<script src="./script/index.js"></script>
+	<script src="./script/share_analytics.js"></script>
+</body>
+</html>

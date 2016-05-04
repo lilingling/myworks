@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <meta content="telephone=no" name="format-detection" />
+  <title>真·影迷 大挑战 赢电影节套票</title>
+  <link href="css/style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+  <div class="loading">
+    <div class="anim-loading"></div>
+  </div>
+  <div class="wrap">
+    <section class="cover">
+      <i class="logo"></i>
+      <img src="images/bg1.jpg" alt="">
+      <div class="board-box">
+        <div class="anim-board"></div>
+        <div class="board"></div>
+      </div>
+      <div class="button-start" id="start"></div>
+      <div class="mark-rule" id="mark_rule"></div>
+      <div class="rule-box">
+        <ul class="rule">
+          <li>3月28日-3月31日期间参与答题，如果你是阅片无数的“真影迷”就可获得观影红包并获得
+            <strong>北京电影节单元套票抽奖资格</strong>
+          </li>
+          <li>已获得抽奖资格的用户请登录微票儿app，进入活动页面，选择“已答题用户抽奖“填写答题时留下的手机号登记抽奖</li>
+          <li>每位用户仅有一次中奖机会，同一账号、设备号、手机号将视为同一用户</li>
+          <li>抽奖形式：活动结束后，将从活动期间参与抽奖的用户中
+            <strong>随机抽取20名，每人发放一套北京电影节单元套票。</strong>观影场次以套票为准</li>
+          <li>成功获得套票的用户我们将与你电话联系，请注意接听；获得观影红包的用户红包将直接发放到你的帐户，请注意使用有效期</li>
+          <li>活动参与过程中，如果出现作弊行为微票儿将自动取消你参加本次活动的机会，并有权取消你后续参与微票儿任意活动的权利，必要时追究法律责任</li>
+          <li>如有其它问题，请拔打客服热线
+            <br/>
+            <strong style="font-size:.24rem">4001-100-100，小票儿会为您解答</strong>
+          </li>
+        </ul>
+        <div class="close" id="butn_close"></div>
+      </div>
+    </section>
+    <section class="answer-sheet" id="answer-sheet">
+      <img src="images/bg2.jpg" alt="" style="height:100%;">
+      <div class="question">
+        <div class="question-box">
+          <div class="film-top"></div>
+          <div class="box">
+            <h1 class="question-num">QUESTION-01</h1>
+            <div class="question-title">梦露的这个经典画面，源自哪部电影？</div>
+            <ul class="options">
+              <li>
+                <span data-answer="A">A. </span>热情如火</li>
+              <li>
+                <span data-answer="B">B. </span>七年之痒</li>
+              <li>
+                <span data-answer="C">C. </span>游龙戏凤</li>
+              <li>
+                <span data-answer="D">D. </span>愿嫁金龟婿</li>
+            </ul>
+            <img src="images/pic01.jpg" alt="" class="pic" style="position:relative;bottom:1.6rem">
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <section class="result" id="result1">
+      <img src="images/resultBg.jpg" alt="">
+      <div class="resultText resultText1">
+        <p>
+          <span></span>
+          <strong id="correctCount"></strong>
+          <span></span>
+        </p>
+        <p></p>
+        <p></p>
+      </div>
+      <div class="xiaopiao xiaopiao-result1"></div>
+      <div class="button-result button-restart" id="restart"></div>
+    </section>
+    <section class="result" id="result2">
+      <img src="images/resultBg.jpg" alt="">
+      <div class="resultText resultText2">
+        <p></p>
+        <p id="movieType"></p>
+        <p></p>
+        <p></p>
+        <p></p>
+      </div>
+      <div class="xiaopiao xiaopiao-result2"></div>
+      <div class="button-result button-getpacket" id="getpacket"></div>
+
+    </section>
+    <section id="packet-box" style="position:fixed;top:0;left:0;z-index:9999;display:none">
+      <div class="packet-box">
+        <div class="packet">
+          <input type="tel" class="tel" id="phone_num1" name="tel" value="输入手机号">
+          <p class="error">请输入正确的手机号</p>
+          <div class="button-packet button-get" id="getBonus"></div>
+          <div class="prompt-box" id="prompt2">打开微票儿app使用微信登录后，可在“我的”-“红包”查看红包详情</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="http://cdnjs.gtimg.com/cdnjs/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="http://cdnjs.gtimg.com/cdnjs/libs/zepto/1.1.4/zepto.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/wx.js"></script>
+  <script src="js/wxbridge.js"></script>
+  <script>
+    var URL= window.location.href;
+    var indx = URL.indexOf('index.html');
+    var indx2 =URL.indexOf('#');
+    var subUrl ='';
+    var link ='';
+    if(indx != -1){
+      subUrl = URL.substring(0,indx-1);
+    }
+    if(indx2 != -1){
+      link = URL.substring(0,indx2-1);
+      window.location.href = link;
+    }
+    var share_img_url = subUrl + "/images/share.jpg";
+    console.log(share_img_url);
+    WxBridge.share({
+      'imgUrl': share_img_url, // 图片地址
+      'link': link, // 链接地址
+      'title': '真·影迷 大挑战 赢取北京电影节限量套票', // 分享标题
+      'desc': '是真影迷的话就来试试看吧' // 分享内容
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+extends ../tmp/jade/base
+
+block title
+	title 情人节的日常
+block append content 
+	.wrapper#wrapper
+		.mask_loading
+			.loading
+				.loadEffect
+					span
+					span
+					span
+					span
+					span
+					span
+					span
+					span
+				.loading-process 收取中...
+		.wrapper_chat
+	.box_keyboard
+		.box_input
+			i.voice
+			span.input#input 
+			i.face
+			i.add
+		.keyboard
+			img.emoji.emojitemp(src="images/emoji3.jpg")
+			.button_send#send 发送
+			.butn_box
+				.butn_a.butn A.我擦爹娘都开始虐狗了，我要去电影院占领单号座！
+				.butn_b.butn   B.帮爹妈玩一把浪漫，我也要约妹子去看电影。
+block append headscript
+	script.
+		var URL= 'http://weixin.wepiao.com/huodong/wx/20160203/qrjapp';
+		var share_img_url = URL+"/images/share.jpg";
+		WxBridge.share({
+				'imgUrl' : share_img_url, // 图片地址
+				'link' : window.location.href, // 链接地址
+				'title' : '如何机智面对你妈逼你找女朋友', // 分享标题
+				'desc' : '又到一年情(nue)人(gou)节（ri），面对那个“经典问题”该如果从容面对' // 分享内容
+		});
+	script(src="js/app.js")
+
+			
+			

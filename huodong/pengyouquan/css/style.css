@@ -1,0 +1,419 @@
+/*----public css start-----*/
+sub, sup {
+    line-height: 0;
+}
+body, h1, h2, h3, h4, h5, h6, dl, dt, dd, ul, ol, li, th, td, p, blockquote, pre, form, fieldset, legend, input, button, textarea, hr {
+    margin: 0;
+    padding: 0;
+}img
+ table {
+     border-spacing: 0;
+     border-collapse: collapse;
+ }
+fieldset, img {
+    border: 0;
+}
+input, textarea {
+    outline-style: none;
+}
+textarea {
+    resize: none;
+}
+address, caption, cite, code, dfn, em, i, th, var {
+    font-weight: normal;
+    font-style: normal;
+}
+html, body {
+    font-size: 62.5%;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+ul li{list-style: none;}
+a,li{-webkit-tap-highlight-color:rgba(0,0,0,.0);}
+img{  display: block;  width:100%;}
+/*----public css end-----*/
+.mask_loading{position:fixed;
+    z-index:999;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    background-color:#fbe5c0;
+    z-index:999;
+}
+.icon-loading{
+    position:absolute;
+    top:19.6%;
+    left:50%;
+    -webkit-transform:translateX(-50%);
+    width:18.2%
+}
+
+.wrap{
+    position:absolute;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    background:url("../images/red-bg.jpg") top center no-repeat;
+    background-size: cover;
+}
+ .box{position:relative}
+.bg{
+    position:absolute;
+    top:0;
+    width:100%;
+    -webkit-backface-visibility: hidden;
+    /*margin-top:500px;*/
+    -webkit-transform: translate3d(0,0,0);
+    -webkit-transition: -webkit-transform 15s linear .1s
+}
+.bg-box{
+    visibility: hidden;
+}
+.bg-01{
+    width:100%;
+    background:url('../images/bg-01.png') no-repeat;
+    background-size: cover;
+}
+.bg-02{
+    width:100%;
+    background:url('../images/bg-02.png') no-repeat;
+    background-size: cover;
+}
+.bg-03{
+    width:100%;
+    background:url('../images/bg-03.png') no-repeat;
+    background-size: cover;
+}
+.bg-04{
+    width:100%;
+    background:url('../images/bg-04.png') no-repeat;
+    background-size: cover;
+}
+.bg-05{
+    width:100%;
+    background:url('../images/bg-05.png') no-repeat;
+    background-size: cover;
+}
+.bg-06{
+    width:100%;
+    background:url('../images/bg-06.png') no-repeat;
+    background-size: cover;
+}
+.bg-07{
+    width:100%;
+    background:url('../images/bg-07.png') no-repeat;
+    background-size: cover;
+}
+.bg-08{
+    width:100%;
+    background:url('../images/bg-08.png') no-repeat;
+    background-size: cover;
+}
+/*@-webkit-keyframes slideUp {
+    0%{
+        -webkit-transform:translate3d(0,0,0);
+    }
+    100%{
+        -webkit-transform:translate3d(0,-1000px,0);
+    }
+ }*/
+.eye,.made,.flower,.hollywood,.downhill,.man,.superman,.buyButn,.cube,.camera{
+    position:absolute;
+    left:0;
+    width:100%;
+    -webkit-transform: translate3d(0,0,0);
+}
+.imgplaceholder{
+    visibility: hidden;
+}
+.eye{
+    top:3.5%;
+    background:url('../images/eye1.png') 0 0 no-repeat;
+    background-size:cover;
+
+}
+@-webkit-keyframes blink {
+
+    100%{
+        background-position: 0 100%;
+    }
+ }
+.made{
+    top:11.5%;
+    background:url('../images/made.png') no-repeat 0 0 ;
+    background-size:cover;
+    -webkit-transform: translate3d(0,0,0);
+
+}
+@-webkit-keyframes  colorChange{
+    100%{
+        background-position: 0 150%;
+    }
+}
+.man{
+    top:17.5%;
+    background:url('../images/man.png') no-repeat 0 0 ;
+    background-size:cover;
+}
+@-webkit-keyframes  shake{
+    0%{
+        -webkit-transform:rotate(0deg);
+    }
+    100%{
+        -webkit-transform:rotate(5deg);
+    }
+}
+.camera{
+    top:23.8%;
+    background:url('../images/camera.png') no-repeat 0 0 ;
+    background-size:cover;
+    opacity: 0;
+
+}
+@-webkit-keyframes  camera-blink{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        background-position: 0 125%;
+    }
+}
+.flower{
+    top:33.5%;
+    background:url('../images/flower.png') no-repeat 0 0 ;
+    background-size:cover;
+    opacity: 0;
+    -webkit-transform: translate3d(0,0,0);
+
+}
+@-webkit-keyframes  bloom{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        background-position: 0 bottom;
+    }
+}
+.hollywood{
+    top:45.5%;
+    background:url('../images/hollywood2.png') no-repeat 0 0 ;
+    background-size:cover;
+    opacity: 0;
+}
+@-webkit-keyframes hollywood-blink {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        background-position: 0 100%;
+    }
+}
+.downhill{
+    top:55.2%;
+    background:url('../images/downhill.png') no-repeat 0 0 ;
+    background-size:cover;
+    opacity: 0;
+    -webkit-transform: translate3d(0,0,0);
+
+}
+@-webkit-keyframes  goDown{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        background-position: 100% 0;
+    }
+}
+.bird{
+    position:absolute;
+    top:54%;
+    width:100%;
+    background: url('../images/bird1.png') no-repeat;
+    -webkit-animation:fly .2s steps(2) 0s infinite ;
+    background-size:cover;
+}
+@-webkit-keyframes  fly{
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: 0 200%;
+    }
+}
+.superman{
+    bottom:29.4%;
+    background: url('../images/superman.png') no-repeat;
+    -webkit-animation:superman .2s steps(2) 0s infinite ;
+    background-size:cover;
+    z-index: 2;
+}
+@-webkit-keyframes  superman{
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: 0 200%;
+    }
+}
+.buyButn{
+    display: block;
+    bottom:5.4%;
+    background:url('../images/buyButn.png') no-repeat;
+    background-size:cover;
+    -webkit-animation:colorChange1 .2s steps(3) 0s infinite;
+}
+@-webkit-keyframes  colorChange1{
+    100%{
+        background-position: 0 150%;
+    }
+}
+.cube{
+    bottom:12.8%;
+    background:url('../images/cube123.png') no-repeat;
+    background-size:cover;
+
+}
+@-webkit-keyframes zhuan{
+    100%{
+        background-position: 100% 0;
+    }
+}
+.current.eye{
+    -webkit-animation:blink .8s steps(5) 0s 1 forwards ;
+    -webkit-backface-visibility: hidden;
+}
+.current.made{
+    -webkit-animation:colorChange .2s steps(3) 0s infinite ;
+    -webkit-backface-visibility: hidden;
+}
+.current.man{
+    -webkit-animation:shake .2s ease 0s 5 ;
+    -webkit-backface-visibility: hidden;
+}
+.current.flower{
+    -webkit-animation:bloom .5s steps(2) 0s 1 forwards;
+    -webkit-backface-visibility: hidden;
+}
+.current.hollywood{
+    -webkit-animation:hollywood-blink .5s steps(6)  0s infinite;
+    -webkit-backface-visibility: hidden;
+}
+.current.downhill{
+    -webkit-animation:goDown .5s steps(2) 0s 1 forwards;
+    -webkit-backface-visibility: hidden;
+}
+.current.cube{
+    -webkit-animation:zhuan 1.5s steps(2) 0s 1 forwards;
+    -webkit-backface-visibility: hidden;
+}
+.current.camera {
+    -webkit-animation: camera-blink .5s steps(5) 0s infinite;
+    -webkit-backface-visibility: hidden;
+}
+/*.current.buyButn{*/
+    /*-webkit-animation:colorChange1 .2s steps(3) 0s infinite;*/
+/*}*/
+.button{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+}
+/*.musicButton,.playButton,.backButton{*/
+    /*position: fixed;*/
+    /*bottom: 0;*/
+    /*left:7.7%;*/
+    /*width:29.5%;*/
+    /*background:url('../images/menu-butn1.jpg') no-repeat;*/
+/*}*/
+/*.musicButton{*/
+    /*background-position: 0 0;*/
+    /*25%*/
+    /*background-size:cover;*/
+/*}*/
+/*.playButton{*/
+    /*left:37.2%;*/
+    /*background-position: 0 60%;*/
+    /*75%*/
+    /*background-size:cover;*/
+/*}*/
+.backButton{
+    left:66.7%;
+    background-position: 0 80%;
+    background-size:cover;
+}
+.musicButton{
+    position: fixed;
+    top:2.8%;
+    right:6.7%;
+    width:9.5%;
+    background:url(../images/music.png) 0 0 no-repeat;
+    background-size:cover;
+    z-index: 999;
+}
+
+.playButton{
+    position: absolute;
+    /*top: 14.5%;*/
+    bottom:0;
+    width:26.4%;
+    left: 50%;
+    /*background:url(../images/playButton.png) 0 0 no-repeat;*/
+    background-size:cover;
+    z-index: 999;
+    /*-webkit-animation:play .8s ease 0s infinite;*/
+    -webkit-transform: translate(-50%);
+}
+.playAnimation{
+    width:100%;
+    -webkit-animation:play .8s ease 0s infinite;
+    background:url(../images/playButton.png) 0 0 no-repeat;
+    background-size:cover;
+}
+.musicButton-blank{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    z-index: 999;
+    /*background-color: yellow;*/
+    width: 26%;
+    height: 13%;
+    -webkit-tap-highlight-color:rgba(0,0,0,.0);
+}
+
+.hand{
+    position: absolute;
+    width: 37%;
+    bottom: 0%;
+    right: -23%;
+}
+.bannerHoder{
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width:100%;
+}
+@-webkit-keyframes play{
+    0%{
+        -webkit-transform:scale3d(0.9,0.9,0.9)
+    }
+    50%{
+        -webkit-transform:scale3d(1,1,1)
+    }
+    100%{
+        -webkit-transform:scale3d(0.9,0.9,0.9)
+    }
+ }
+
+
+
+@media only screen and (device-height:480px) and (-webkit-device-pixel-ratio:2){
+    .playButton{ width:20%;}
+}

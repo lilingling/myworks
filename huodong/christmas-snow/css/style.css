@@ -1,0 +1,163 @@
+@import url("animate.css");
+
+/* RESET */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, figure {
+    margin: 0;
+    padding: 0;
+}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+ul {
+    list-style: none;
+}
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+img{
+	border: none;
+  width:100%;
+}
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+/* snow */
+.wrapper{
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color: #231a2b;
+  overflow: hidden;
+}
+.snow{
+  position: relative;
+  width:100%;
+  height:100%;
+}
+.xiaohuangren{
+  position: absolute;
+  bottom:5%;
+  left:0;
+  width:100%;
+  height:200px;
+}
+.xiaohuangren img{
+  width:100px;
+}
+.anim-a{
+  -webkit-transform-origin:center bottom;
+  -webkit-transform:translateX(-100%) rotate(10deg);
+  -webkit-animation:move-left .8s ease 2s forwards,swing .6s ease 3s infinite alternate;
+}
+.anim-b{
+  -webkit-transform:translateY(200%);
+  -webkit-animation:move-bottom .8s ease 2s forwards,bounce-top 1s cubic-bezier(0.47, 0.17, 0.27, 0.99) 3s infinite;
+}
+.anim-c{
+  -webkit-transform:translateX(100%);
+  -webkit-animation:move-right .8s ease 2s forwards,bounce-middle .8s cubic-bezier(0.47, 0.17, 0.27, 0.99) 3s infinite;
+}
+
+@-webkit-keyframes bounce-top{
+  0%{
+    -webkit-transform:translate3d(0,0,0);
+  }
+  40%{
+    -webkit-transform:translate3d(0,-80px,0);
+
+  }
+  80%{
+    -webkit-transform:translate3d(0,5px,0);
+
+  }
+  100%{
+    -webkit-transform:translate3d(0,0,0);
+
+  }
+}
+@-webkit-keyframes bounce-middle{
+  0%{
+    -webkit-transform:translate3d(0,0,0);
+  }
+  40%{
+    -webkit-transform:translate3d(0,-60px,0);
+
+  }
+  80%{
+    -webkit-transform:translate3d(0,4px,0);
+
+  }
+  100%{
+    -webkit-transform:translate3d(0,0,0);
+
+  }
+}
+@-webkit-keyframes bounce-bottom{
+  0%{
+    -webkit-transform:translate3d(0,0,0);
+  }
+  40%{
+    -webkit-transform:translate3d(0,-30px,0);
+
+  }
+  80%{
+    -webkit-transform:translate3d(0,2px,0);
+
+  }
+  100%{
+    -webkit-transform:translate3d(0,0,0);
+
+  }
+}
+
+@-webkit-keyframes move-right{
+  100%{
+    -webkit-transform:translateX(0);
+  }
+}
+@-webkit-keyframes move-left{
+  100%{
+    -webkit-transform:translateX(0);
+  }
+}
+@-webkit-keyframes move-bottom{
+  100%{
+    -webkit-transform:translateY(0);
+  }
+}
+@-webkit-keyframes swing{
+  0%{
+    -webkit-transform:rotate(-5deg);
+  }
+
+  100%{
+    -webkit-transform:rotate(5deg);
+  }
+}
+.music{
+  position: absolute;
+  top:10px;
+  right:10px;
+  width:50px;
+  height:50px;
+  z-index: 999;
+}

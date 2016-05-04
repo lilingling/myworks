@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>最炫暑期档，疯抢特价券</title>
+    <meta name="wxm:timeline_title" content="最炫暑期档，疯抢大片特价券">
+    <meta name="wxm:appmessage_title" content="最炫暑期档，疯抢大片特价券">
+    <meta name="wxm:appmessage_desc" content="18.8看2D,28.8看3D,8部大片特惠">
+    <meta name="wxm:img_url" content="http://wximg.gtimg.com/tmt/_events/promo/EyI3Z2mL/images/share.jpg">
+    <meta name="wxm:link" content="http://wximg.qq.com/tmt/_events/promo/EyI3Z2mL/">
+    <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name='apple-touch-fullscreen' content='yes'>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script src="//cdnjs.gtimg.com/cdnjs/libs/wxmoment/0.0.2/wxmoment.min.js" charset="UTF-8"></script>
+</head>
+
+<body>
+<div class="wrap" id="wrap">
+    <div class="mask_loading">
+        <div class="icon-loading">
+            <img  src="images/loading.gif" >
+        </div>
+    </div>
+    <div class="musicButton-blank"  >
+    <div class="musicButton on" id="musicButton">
+        <img src="images/music-blank.png">
+    </div>
+    </div>
+    <div class="bg paused" id="bg" data-oh="5849">
+        <div class="bannerHoder">
+            <div class="playButton" id="playButton">
+                <div class="playAnimation" >
+                    <img src="images/playButton-blank.png" >
+                </div>
+                <div class="hand">
+                    <img src="images/hand.png">
+                </div>
+            </div>
+        </div>
+        <img src="images/banner.png" class="banner" data-oh="841">
+        <div class="box">
+            <div class="bg-01 bg-box" data-oh="643" style="visibility:visible">
+            </div>
+            <div class="bg-02 bg-box" data-oh="523">
+            </div>
+            <div class="bg-03 bg-box" data-oh="785">
+            </div>
+            <div class="bg-04 bg-box" data-oh="693">
+            </div>
+            <div class="bg-05 bg-box" data-oh="589">
+            </div>
+            <div class="bg-06 bg-box" data-oh="680">
+            </div>
+            <div class="bg-07 bg-box" data-oh="1064">
+            </div>
+            <div class="bg-08 bg-box" data-oh="872">
+            </div>
+
+        <!--<img src="images/bg-01.png">-->
+        <!--<img src="images/bg-02.png">-->
+        <!--<img src="images/bg-03.png">-->
+        <!--<img src="images/bg-04.png">-->
+        <!--<img src="images/bg-05.png">-->
+        <!--<img src="images/bg-06.png">-->
+        <!--<img src="images/bg-07.png">-->
+        <!--<img src="images/bg-08.png">-->
+        <div class="eye animate" data-oh="233">
+        </div>
+        <div class="made animate" data-oh="325">
+        </div>
+        <div class="man animate" data-oh="132">
+        </div>
+        <div class="camera animate" data-oh="231">
+        </div>
+        <div class="flower animate" data-oh="237">
+        </div>
+        <div class="hollywood animate" data-oh="267">
+        </div>
+        <div class="downhill animate" data-oh="685">
+        </div>
+        <div class="bird animate" data-oh="240">
+        </div>
+        <div class="superman animate" data-oh="225">
+        </div>
+        <div class="cube animate bigpic" data-oh="1022">
+        </div>
+        <a href="http://weixin.wepiao.com/huodong/wx/20150619/pengyouquan?from=3300000000" class="buyButn animate" data-oh="100">
+        </a>
+        </div>
+
+    </div>
+    <!--<div class="button">-->
+        <!--<div class="musicButton on" id="musicButton">-->
+            <!--<img src="images/butn-blank.png">-->
+        <!--</div>-->
+        <!--<div class="playButton" id="playButton">-->
+            <!--<img src="images/butn-blank.png">-->
+        <!--</div>-->
+        <!--<div class="backButton" id="backButton">-->
+            <!--<img src="images/butn-blank.png">-->
+        <!--</div>-->
+        <!--<img src="images/menu.png">-->
+    <!--</div>-->
+<!--</div>-->
+<script src='js/zepto.js'></script>
+<script>
+$(function(){
+	var share = new WxMoment.Share();
+    function doMainProcess(){
+        var animateBox = $('.bg');
+        var screenw=$(window).width();
+        var screenH=$(window).height();
+        var start = 0;
+        var banner_oh;
+        var len=$('.animate').length;
+        $('.bannerHoder').css('height',screenH);
+        //计算后添加图的高度
+        $.each($('.bg-box'), function( idx, item ){
+            //console.log( item )
+            bg_oh = parseInt( $(item).attr('data-oh') ) * screenw / 640;
+            $(item).css('height', bg_oh );
+        });
+        $.each($('.bg'), function( idx, item ){
+            //console.log( item )
+            bg_oh = parseInt( $(item).attr('data-oh') ) * screenw / 640;
+            $(item).css('height', bg_oh );
+        });
+        //计算背景的高度
+        $.each($('.banner'), function( idx, item ){
+            //console.log( item )
+            banner_oh = parseInt( $(item).attr('data-oh') ) * screenw / 640;
+
+        });
+
+        var bgH=$('.bg').height();
+//        console.log('bgH'+bgH)
+        var vh = bgH -screenH;
+        //图片太多，导致页面卡顿，计算动画的高度
+        $.each($('.animate'), function( idx, item ){
+            var oh = parseInt( $(item).attr('data-oh') ) * screenw / 640;
+            $(item).css('height', oh )
+        });
+        //页面向上移动
+        // var timer = setInterval( scroller, 10);
+        // function scroller(){
+        //     $('.bg').css('-webkit-transform', 'translate3d(0,-' + start + 'px,0)');
+        //     start += 1;
+        //     if( start >= bgH ){
+        //         $('.playButton').css('background-position','0 100%');
+        //         clearInterval( timer );
+        //     }
+
+        // }
+        // //控制动画开始不播放
+        // if( animateBox.hasClass( 'paused' ) ){
+        //     clearInterval( timer );
+        // }
+        //控制动画执行
+        function doAnimation(){
+            var currentAnimate = $('.animate').eq(0);
+            if( !currentAnimate.length ){
+                clearInterval( subTimer );
+                return;
+            }
+            var offTop = currentAnimate.offset().top;
+            if( screenH == 416 ){
+                if( offTop > 0 && offTop < 200 ){
+                    // alert('do')
+                    currentAnimate.addClass('current').removeClass('animate');
+                }
+            } else {
+                if( offTop > 0 && offTop - screenH < -200 ){
+                    // alert('do')
+                    currentAnimate.addClass('current').removeClass('animate');
+                }
+            }
+            hideAndShow();
+            // var top=Math.round(currentAnimate.position().top)+banner_oh;
+            // var h= currentAnimate.height();
+            // var viewEdge = currentAnimate.hasClass('bigpic') ? ( (screenH-h)/2 + 200 ) : (screenH-h)/2;
+            // if((top-start)< viewEdge ){
+            // };
+        }
+
+        function hideAndShow(){
+            $.each( $('.bg-box'), function( idx, item ){
+                var $item = $(item);
+                var cssTop = $item.position().top + banner_oh;
+                var offTop = $item.offset().top;
+                console.log(offTop);
+                var oH = $item.height();
+                var viewEdge = offTop + oH;
+                if( screenH == 416 ){
+                    viewEdge = offTop + oH + screenH;
+                }
+                if( offTop > 0 && ( offTop - screenH < 200 ) ){
+                    $item.css('visibility','visible')
+                }else if( viewEdge < 0 ){
+                    $item.css('visibility','hidden')
+                    $item.addClass('hidden');
+                }
+
+            })
+        }
+        // 
+        var subTimer = null;
+
+        //播放|暂停切换
+        $('#playButton').on('touchend',function(event){
+
+            if( start >= vh ){
+                return false;
+            }
+            if( animateBox.hasClass( 'paused' ) ){
+
+                $('.bg').css({
+                    '-webkit-transform': 'translate3d(0,-' +(vh+banner_oh) + 'px,0)'
+                })
+                // clearInterval( timer);
+                clearInterval( subTimer );
+                // timer = setInterval( scroller, 2 );
+                subTimer = setInterval( doAnimation, 200 );
+                $('.bg').removeClass('paused');
+//                $(this).css('background-position','0 bottom');
+                //papp.audio.play();
+                $('.playAnimation').css('background-position','0 bottom');
+                setTimeout( function(){
+                    $('.playButton').remove();
+                }, 3000 )
+                checkAudioStatus();
+
+            }
+            else {
+                // clearInterval( timer);
+                clearInterval( subTimer );
+                $('.bg').addClass('paused');
+                //$(this).css('background-position','0 100%');
+            }
+        });
+
+        //倒退按钮
+        $('#backButton').on('touchend',function(){
+            $('.bg').css('-webkit-transform', 'translate3d(0,0,0)');
+            $('#playButton').css('background-position','0 60%');
+            $('.bg').removeClass('paused');
+            // clearInterval( timer);
+            clearInterval( subTimer );
+            start=0;
+            // timer = setInterval( scroller,2 );
+            subTimer = setInterval( doAnimation, 200 );
+        });
+
+        //音乐模块
+        var papp = {};
+        var audioStatus = true;
+        var audioPlayStatus = true;
+        function checkAudioStatus(){
+            if( audioStatus && audioPlayStatus ){
+                papp.audio.play();
+            } else {
+                papp.audio.pause();
+            }
+        }
+        papp.audio = function(para){
+            var _audio = new Audio();
+            var target = $(para.target);
+            mergeKey(_audio, para, false);
+            papp.audio = _audio;
+            target.on("click",function(){
+                if(target.hasClass("on")){
+                    audioStatus = false;
+                    //papp.audio.pause();
+                    target.removeClass("on");
+                    $('.musicButton').css('background-position','0 100%');
+                }
+                else{
+                    //papp.audio.play();
+                    target.addClass("on");
+                    $('.musicButton').css('background-position','0 0');
+                    audioStatus = true;
+                }
+                checkAudioStatus();
+            });
+        };
+        function mergeKey(obj1, obj2, union){
+            union = typeof(union)=="undefined" ? true : union;
+            for(var key in obj2){
+                if(obj2.hasOwnProperty(key) && (union || (key in obj1))){
+                    obj1[key] = obj2[key];
+                }
+            }
+            return obj1;
+        }
+        papp.audio({
+            target: ".musicButton-blank",
+            src: "music.mp3",
+            preload: "auto",
+            loop: true,
+            autoPlay: false
+        });
+
+
+        // 禁用bg滚动
+        var $bg=document.getElementById('bg');
+        $bg.addEventListener('touchmove', function( event ){
+            event.preventDefault();
+        }, false )
+    }
+
+    //横屏提示
+    new WxMoment.OrientationTip();
+
+    //loading加载
+    //var basePath = "http://wximg.gtimg.com/tmt/_events/promo/EyI3Z2mL/";
+    var basePath = "http://weixin.wepiao.com/";
+    var loader = new WxMoment.Loader();
+    var fileList = ['music.mp3','images/loading.gif','images/red-bg.jpg','images/banner.png','images/bg-01.png','images/bg-02.png','images/bg-03.png','images/bg-04.png',
+        'images/bg-05.png','images/bg-06.png','images/bg-07.png','images/bg-08.png','images/bird1.png','images/cube123.png','images/buyButn.png','images/camera.png','images/downhill.png',
+        'images/eye1.png','images/flower.png','images/hollywood2.png','images/made.png','images/man.png','images/superman.png'];
+
+    for (var i = 0; i < fileList.length; i++) {
+        loader.addImage(basePath + fileList[i]);
+    }
+
+    loader.addProgressListener(function (e) {
+        var percent = Math.round((e.completedCount / e.totalCount) * 100);
+        // console.log("当前加载了", percent, "%");
+    });
+
+    loader.addCompletionListener(function () {
+        $('.mask_loading').hide();
+        doMainProcess();
+    });
+    loader.start();
+
+    //数据统计
+    var wa = new WxMoment.Analytics({
+        //projectName 请与微信商务团队确认
+        projectName: "20150624gcdyhj"
+    });
+})
+
+</script>
+</div>
+</body>
+</html>

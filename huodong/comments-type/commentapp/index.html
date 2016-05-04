@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>认真影迷最好命</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link href="css/style1.css" rel="stylesheet" type="text/css">
+    <script src="js/zepto.js"></script>
+    <script src="js/fx.js"></script>
+    <script src="js/fx_methods.js"></script>
+    <script src="js/wx.js"></script>
+    <script src="js/wxbridge.js"></script>
+    <script>
+        var eventsConfig = {
+            'preLoadImgs': [
+//                'demo.ttf',
+                'music.mp3',
+                'images/loading.gif',
+                "images/bg.jpg",
+                'images/box1.png',
+                'images/box2.png',
+                'images/pic-01.png',
+                'images/pic-02.png',
+                'images/pic-03.png',
+                'images/pic-04.png',
+                'images/pic-05.png',
+                'images/pic-06.png'
+            ],
+            'cycle' : 'false'
+        }
+    </script>
+    <style>
+        @font-face {
+            font-family: 'untitled_2regular';
+            src:
+            url('002-webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body>
+<div class="wrap">
+    <img id="weixinShareImg" src="images/share.jpg" style="position:absolute;z-index:-1;top:-9999px;" >
+    <div class="mask mask_loading">
+        <div class="loading">
+            <img class="icon-loading" src="images/loading.gif">
+            <!--<i class="text-loading">恐龙复活记...</i>-->
+        </div>
+    </div>
+    <div class="orientation_set">
+        <div><img src="images/orientation.png" width="50" alt="" class='translate'>
+            <br>请将屏幕竖向浏览
+        </div>
+    </div>
+    <section class="page-01" id="page-01">
+        <!--<div class="title">-->
+            <!--<img src="images/title.png" alt="">-->
+        <!--</div>-->
+        <div class="box1">
+            <img src="images/box1.png">
+        </div>
+        <div class="box2">
+            <div class="text">
+                |AB,CDEFGHIJK,LMNOPQMNO,MNGMNORS,QMNGQMNORS,,TUOKVWXJK,QYZGab,cZdef,gh,TUOKVijk
+            </div>
+            <a class="button" href="#page-02">
+                <img src="images/button.png">
+            </a>
+            <img src="images/box2.png">
+        </div>
+    </section>
+    <section class="page-02" id="page-02">
+        <img src="images/pic-01.png">
+        <a href="wxmovie://home" class="buyButn">
+            <img src="images/buyButn.png">
+        </a>
+        <img src="images/pic-022.png">
+        <img src="images/pic-03.png">
+        <img src="images/pic-04.png">
+        <img src="images/pic-05.png">
+        <img src="images/pic-06.png">
+    </section>
+
+</div>
+<script>
+    //loading预加载
+    var loading = (function(){
+        $( '.icon-porcess' ).html( '0%' );
+        var loadCount = 0,
+                preLoadImgs = eventsConfig.preLoadImgs,
+                len = preLoadImgs.length;
+        if( len < 2 ){
+            // setTimeout( checkFromShare, 200);
+            return;
+        }
+        $.each( preLoadImgs, function( index, item ){
+            var fakeImg = new Image();
+            fakeImg.src = item;
+            fakeImg.onerror = function(){
+                loadSuccess();
+            }
+            function loadSuccess(){
+                var percent = parseInt( ( loadCount/len ).toFixed( 2 ) * 100 );
+                loadCount ++;
+
+                $( '.icon-porcess' ).html( percent + '%' );
+                if( loadCount === len ){
+
+                    $( '.icon-porcess' ).html( 100 + '%' );
+                    // setTimeout( checkFromShare, 200)
+                    $( '.mask_loading' ).hide();
+//                    $('.poster').addClass('currentScene');
+                }
+            }
+            fakeImg.onload = loadSuccess;
+        })
+    })();
+    //     google analytics
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-58583546-8', 'auto');
+    ga('send', 'pageview');
+
+    //    微信分享
+    var URL = 'http://weixin.wepiao.com/huodong/wx/20150629/commentapp';
+    var share_img_url = URL + "/images/share.jpg";
+    WxBridge.share({
+        'imgUrl': share_img_url, // 图片地址
+        'link': window.location.href, // 链接地址
+        'title': '认真影迷最好命，写短评拿免费电影票', // 分享标题
+        'desc': '世上有两种电影，你喜欢的和不喜欢的。认真表态拿免费影票。' // 分享内容
+    });
+</script>
+
+
+<script>
+    var it = 0;
+    var textString = $.trim($('.text').html());
+    $('.text').text("");
+    var t;
+    console.log(textString.length);
+    function typeit() {
+        var val = textString.charAt(it);
+
+        if (val != ",") {
+            $('.text').find("i").remove();
+            if (it == 0) {
+                $('.text').append("<i> |<\/i>");
+            } else {
+                $('.text').append(val);
+                $('.text').append("<i> |<\/i>");
+            }
+
+        } else {
+            $('.text').append("<br>");
+        }
+        if (it < textString.length - 1) {
+            it++;
+            t = setTimeout("typeit();", 200);
+        }
+        else if (it === textString.length - 1) {
+            $('.button').show();
+        }
+        else {
+            clearTimeout(t);
+        }
+    }
+
+    //音乐模块
+    var papp = {};
+    papp.audio = function (para) {
+        var _audio = new Audio();
+        var target = $(para.target);
+        mergeKey(_audio, para, false);
+        papp.audio = _audio;
+        target.on("click", function () {
+            if (target.hasClass("on")) {
+                papp.audio.pause();
+                target.removeClass("on");
+            } else {
+                papp.audio.play();
+                target.addClass("on");
+            }
+        });
+    };
+    function mergeKey(obj1, obj2, union) {
+        union = typeof(union) == "undefined" ? true : union;
+        for (var key in obj2) {
+            if (obj2.hasOwnProperty(key) && (union || (key in obj1))) {
+                obj1[key] = obj2[key];
+            }
+        }
+        return obj1;
+    }
+    papp.audio({
+        target: "#musicButton",
+        src: "music.mp3",
+        preload: "auto",
+        loop: true,
+        autoPlay: false
+    });
+
+
+    $(function () {
+        var start=0;
+        function musicPlay(){
+            start+=1;
+            console.log(start);
+            if(start>15){
+                clearInterval(t1);
+                papp.audio.pause();
+            }
+        }
+        var t1=setInterval(musicPlay,1000);
+        papp.audio.play();
+        typeit();
+
+        // 禁用滚动
+        var $page_01 = document.getElementById('page-01');
+        $page_01.addEventListener('touchmove', function (event) {
+            event.preventDefault();
+        }, false);
+
+        $('.button').on('click', function () {
+            $('.page-01').fadeOut(500);
+            $('.page-02').show('fast');
+            papp.audio.pause();
+        })
+    });
+
+</script>
+</body>
+</html>

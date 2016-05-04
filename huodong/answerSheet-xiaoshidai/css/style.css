@@ -1,0 +1,406 @@
+/*-------public css start--- */
+sub, sup {
+    line-height: 0;
+}
+body, h1, h2, h3, h4, h5, h6, dl, dt, dd, ul, ol, li, th, td, p, blockquote, pre, form, fieldset, legend, input, button, textarea, hr {
+    margin: 0;
+    padding: 0;
+}img
+ table {
+     border-spacing: 0;
+     border-collapse: collapse;
+ }
+fieldset, img {
+    border: 0;
+}
+input, textarea {
+    outline-style: none;
+}
+textarea {
+    resize: none;
+}
+address, caption, cite, code, dfn, em, i, th, var {
+    font-weight: normal;
+    font-style: normal;
+
+}
+html, body {
+    overflow: hidden;
+    height: 100%;
+}
+body {
+    font-size: 62.5%;
+    background-color: #060606;
+}
+ul li{list-style: none}
+/*-------public css end--- */
+
+.mask{position:fixed;
+    z-index:999;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0
+}
+.mask-loading,.loading{background-color:#fff}
+.loading{
+    width:100%;
+    height:100%;
+    background-size:cover
+}
+.icon-loading{
+    position:absolute;
+    top:19.6%;
+    left:31.5%;
+    width:40.6%
+}
+.text-loading{
+    font-size:1rem;
+    position:absolute;
+    top:47.3%;
+    width:100%;
+    height:3%;
+    text-align:center;
+    color:#887f7f;
+}
+.orientation_set{display:none}
+@media screen and (orientation:landscape){
+    .orientation_set{
+        display:block;
+        position:fixed;
+        top:0;
+        left:0;
+        color:#fff;
+        width:100%;
+        height:100%;
+        background:#000;
+        text-align:center;
+        display:-webkit-box;
+        -weibit-box-pack:center;
+        -webkit-box-align:center;
+        z-index:999;
+        font-size:14px;
+        line-height:2em;
+        font-family:"Microsoft YaHei"
+    }
+    @-webkit-keyframes zhuan{
+        0%{
+            -webkit-transform:rotate(0deg);
+            opacity:1}
+        50%{
+            -webkit-transform:rotate(-90deg);
+            opacity:1
+        }
+        100%{
+            -webkit-transform:rotate(0deg);
+            opacity:1
+        }}
+    .orientation_set img{
+        display:inline-block;
+        -webkit-animation:zhuan 1.5s .3s infinite
+    }
+    .orientation_set>div{width:100%}}
+.movein-left,.movein-right{
+opacity: 0;
+-webkit-transition-property:transform;
+-webkit-transition-duration:.5s;
+-webkit-transition-timing-function:ease;
+}
+.movein-left{
+    -webkit-transform:translateX(-30%);
+}
+.movein-right{
+    -webkit-transform:translateX(30%);
+}
+.currentScene .movein-left,.currentScene .movein-right{
+    opacity: 1;
+    -webkit-transform:translateX(0);
+}
+
+#slide{
+    position: relative;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    z-index: 899;
+    margin: 0 auto;
+}
+.scene{
+    position: absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    height:100%;
+    overflow: hidden;
+    background-color: #162b36;
+    background-repeat:no-repeat;
+    background-position: top center;
+    -webkit-transition:top .5s ease 0s;
+    background-size: cover;
+}
+.firstScene,.currentScene{top:0;}
+.scene img{
+    max-width:100%;
+    width:100%;
+}
+
+.currentScene {
+    z-index: 199;
+    top:0;
+    left:0;
+}
+.goUpScene {
+    top: -100%;
+}
+.goDownScene {
+    top: 100%;
+}
+.goUpScene div,
+.goDownScene div{
+    -webkit-transition-delay: .2s;
+}
+.show{
+    opacity: 0;
+    -webkit-transition-property: transform,opacity;
+    -webkit-transition-timing-function:linear;
+    -webkit-transition-duration: 1s;
+}
+.currentAction .show{
+    opacity: 1;
+}
+.box{
+    position: relative;
+    width:100%;
+    /*height:50%;*/
+}
+.subTitle-01,.subTitle-02{
+    width:100%;
+    position:absolute;
+    left:0;
+
+}
+.subTitle-01{
+    bottom:0%;
+}
+.subTitle-02{
+    top:0%;
+}
+.title{
+    position: absolute;
+    top: -23%;
+    opacity: 0;
+   
+
+
+}
+.currentScene .title{
+    -webkit-animation-name:rotateIn;
+    -webkit-animation-duration:.5s;
+    -webkit-animation-delay:0s;
+    -webkit-animation-timing-function:ease-in;
+    -webkit-animation-fill-mode:forwards;
+}
+@-webkit-keyframes rotateIn{
+    0%{
+        opacity: 1;
+        -webkit-transform:scale3d(2,2,2) rotate(90deg);
+    }
+    100%{
+        opacity: 1;
+        -webkit-transform:scale3d(1,1,1) rotate(0deg);
+    }
+}
+.zuo{
+    position: absolute;
+    top: 19%;
+    width: 24.5%;
+    right: 21%;
+    opacity: 0;
+     -webkit-animation-name:zoom;
+    -webkit-animation-duration:.8s;
+    -webkit-animation-delay:.5s;
+    -webkit-animation-timing-function:ease-out;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-direction:alernate;
+
+}
+@-webkit-keyframes zoom-in-out{
+    0%{
+        opacity: 1;
+        -webkit-transform:scale3d(.9,.9,.9);
+    }
+    50%{
+        opacity: 1;
+        -webkit-transform:scale3d(1,1,1);
+    }
+    100%{
+        opacity: 1;
+        -webkit-transform:scale3d(.9,.9,.9);
+    }
+}
+@-webkit-keyframes zoom{
+    0%{
+        opacity: 1;
+        -webkit-transform:scale3d(1,1,1);
+    }
+    50%{
+        opacity: 1;
+        -webkit-transform:scale3d(1.2,1.2,1.2);
+    }
+    100%{
+        opacity: 1;
+        -webkit-transform:scale3d(1,1,1);
+    }
+}
+.pic-bg{
+    position:absolute;
+    bottom:-10%;
+    left:0;
+    z-index: 99;
+}
+.rotateTriangle{
+    width:57.5%;
+    position:absolute;
+    top:6%;
+    left:0%;
+    opacity: 0;
+}
+@-webkit-keyframes rotateTriangle{
+    0%{
+        opacity: 1;
+        -webkit-transform:rotate(90deg);
+    }
+     100%{
+        opacity: 1;
+        -webkit-transform:rotate(0deg);
+    }
+}
+.currentAction .rotateTriangle{
+    -webkit-animation:rotateTriangle .3s ease-in 0s;
+    -webkit-animation-iteration-count:1;
+    -webkit-animation-fill-mode:forwards;
+}
+.description{
+    position:absolute;
+    top:20%;
+    right:0%;
+    -webkit-transition-delay:.8s;
+}
+.button{
+    position:absolute;
+    top:38%;
+}
+.button li{
+    width:50%;
+    background-image:url('../images/button.png');
+    background-size:cover;
+    float:left;
+    }
+.currentScene .button li{
+    -webkit-animation:zoom-in-out .8s linear 1s;
+    -webkit-animation-iteration-count:infinite;
+}
+.button1{
+    background-position: 0 0;
+}.button2{
+    background-position: 100% 0;
+}
+ .currentButn{
+     background-image:url('../images/button-active.png') !important;
+ }
+.slide-arrow {
+    position: absolute;
+    width: 5%;
+    bottom: 0%;
+    left:50%;
+    -webkit-animation-name: jump-l-r;
+    -webkit-animation-duration:.8s;
+    -webkit-animation-delay:0s;
+    
+     -webkit-animation-iteration-count: infinite;
+    -webkit-animation-fill-mode: forwards;
+
+    opacity: 1;
+    z-index:99;
+}
+@-webkit-keyframes jump-l-r{
+    0%{
+        -webkit-transform:translateY(-1%) translateX(-50%) rotate(90deg);
+    }
+    50%{
+        -webkit-transform:translateY(5px) translateX(-50%) rotate(90deg);
+    }
+    100%{
+        -webkit-transform:translateY(0%) translateX(-50%) rotate(90deg);
+    }
+}
+.scoreText{
+    position:absolute;
+    top:17%;
+    left:0;
+    background:url('../images/score1.png') no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+}
+.score{
+    position: absolute;
+    top:11%;
+    right:0;
+    width:40%;
+    background:url('../images/score.png') no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+
+}
+.ticketButn{
+    display: block;
+    position: absolute;
+    top: 32%;
+    left: 17%;
+    width: 64%;
+    -webkit-animation:zoom-in .8s ease-in-out 0s;
+    -webkit-animation-iteration-count:infinite;
+}
+@-webkit-keyframes zoom-in{
+    0%{
+    
+        -webkit-transform: scale3d(.9,.9,.9) ;
+    }
+    50%{
+        
+        -webkit-transform: scale3d(1,1,1) ;
+    }
+    100%{
+
+        -webkit-transform: scale3d(.9,.9,.9) ;
+    }
+}
+.logo{
+    position: absolute;
+    top:5px;
+    left:5px;
+    width:23%;
+}
+.result-pic02{
+    position:absolute;
+    top:49%;
+    left:0;
+}
+@media only screen and (device-height:480px) and (-webkit-device-pixel-ratio:2){
+    .pic-bg{
+        bottom:-28%;
+    }
+}
+@media only screen and (-min-device-width:1080px) and (-webkit-min-device-pixel-ratio:2.5){
+    .pic-bg{
+        bottom:-28%;
+    }
+}
+}
+
+
+
+
+
+
+

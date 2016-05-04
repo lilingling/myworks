@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>迪士尼入侵校园</title>
+	 <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style type="text/css">
+      @media only screen and (min-device-width:1080px) and (-webkit-min-device-pixel-ratio:2.5){
+      .button01{
+        background-position:0 0;
+        top: 2.6rem;
+        left:1rem;
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+      }
+      .button02{
+        background-position: 0 -.87rem;
+        top: 2.6rem;
+        left: 3.3rem;
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+      }
+      .logo{
+        position: absolute;
+        width: 1.48rem;
+        top: 0;
+        left:0;
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+      }
+      .rules{
+        width:90%;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+      }
+    }
+    @media only screen and (device-height:480px) and (-webkit-device-pixel-ratio:2){
+      .button01{
+        background-position:0 0;
+        top: 2.6rem;
+        left:1rem;
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+      }
+      .button02{
+        background-position: 0 -.87rem;
+        top: 2.6rem;
+        left: 3.3rem;
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+      }
+      .logo{
+        position: absolute;
+        width: 1.48rem;
+        top: 0;
+        left:0;
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+      }
+      .rules{
+        width:90%;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+      }
+    }
+    </style>
+</head>
+
+<body>
+	<!-- loading-->
+    <div class="mask mask_loading">
+      <div class="loading"> 
+        <img class="icon-loading" src="images/loading.gif" >
+        <!-- <i class="icon-process">0%</i> -->
+      </div>
+    </div>
+    <!-- 设备方向-->
+    <div class="orientation_set">
+      <div><img src="images/orientation.png"><span>请将屏幕竖向浏览</span></div>
+    </div>
+    <!-- 内容-->
+    <div class="wrapper">
+      <section class="scene firstScene p1_page" id="scene_1">
+        <img src="images/blank02.png" alt="" class="anim-chatbox01">
+        <img src="images/blank01.png" alt="" class="anim-chatbox02">
+        <img src="images/arrow01.png" alt="" class="anim-arrow01">
+      </section>
+      <section class="scene p2_page" id="scene_2">
+        <img src="images/arrow02.png" alt="" class="anim-arrow02">
+        <img src="images/book01.png" alt="" class="anim-book01">
+        <img src="images/book02.png" alt="" class="anim-book02">
+        <img src="images/arrow03.png" alt="" class="anim-arrow03">
+        <img src="images/book03.png" alt="" class="anim-book03">
+      </section>
+      <section class="scene p3_page" id="scene_3">
+        <img src="images/arrow02.png" alt="" class="anim-arrow04">
+        <div class="platebox">
+          <img src="images/plate.png" alt="" class="plate">
+          <img src="images/clean01.jpg" alt="" class="anim-clean">
+          <img src="" alt="" class="bling">
+          <img src="images/tip01.jpg" alt="" class="anim-tip01">
+          <img src="images/arrow04.png" alt="" class="anim-arrow05">
+        </div>
+        <div class="mask1"></div>
+      </section>
+      <section class="scene " id="scene_4">
+        <img src="images/p4_page.jpg" alt="" class="p4_page">
+        <img src="images/arrow05.png" alt="" class="anim-arrow06">
+        <div class="ballbox">
+          <img src="images/tip02.png" alt="" class="anim-tip02">
+          <img src="" alt="" class="ball">
+          <img src="images/arrow06.png" alt="" class="anim-arrow07">
+        </div>
+      </section>
+      <section class="scene " id="scene_5">
+        <div class="dark"></div>
+        <img src="images/p5_page.jpg" alt="" class="p5_page">
+        <img src="images/arrow07.png" alt="" class="anim-arrow08">
+        <img src="images/blank03.png" alt="" class="light">
+        <img src="" alt="" class="phone">
+      </section>
+      <section class="scene" id="scene_6">
+        <img src="images/banner.jpg" alt="" class="banner">
+        <div class="title">
+          <img src="images/title.jpg" alt="">
+          <a href="#" class="button button01">
+            <img src="images/blank04.png" alt="">
+          </a>
+          <a href="http://wap.koudaitong.com/v2/ump/promocard/fetch?alias=g4ivhcri" class="button button02">
+            <img src="images/blank04.png" alt="">
+          </a>
+          <img src="images/logo.jpg" alt="" class="logo">
+        </div>
+        <img src="images/footer.jpg" alt="" class="footer">
+        <div class="rules">
+          <img src="images/rules.png" alt="">
+          <img src="images/close.png" alt="" class="close">
+        </div>
+      </section>
+    </div>
+    <script type="text/javascript" src="scripts/all.js"></script>
+    <script type="text/javascript">
+      //适配
+      $(window).on('resize', function () {
+      var width = document.documentElement.clientWidth;
+      $('html').css('font-size', (width / 640 * 100) + 'px');
+      }).triggerHandler('resize');
+
+      <!--微信分享-->
+      var URL= 'http://weixin.wepiao.com/huodong/wx/20150917/disini';
+      var share_img_url = URL+"/images/share.jpg";
+      WxBridge.share({
+          'imgUrl' : share_img_url, // 图片地址
+          'link' : window.location.href, // 链接地址
+          'title' : '水逆期，新买的6S丢了怎么办？急！', // 分享标题
+          'desc' : '在线等，急！！！' // 分享内容
+      });
+
+      //google analytics
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-58583546-8', 'auto');
+      ga('send', 'pageview');
+      
+ 
+    </script>
+
+</body>
+</html>

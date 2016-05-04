@@ -1,0 +1,78 @@
+extends ../tmp/jade/base
+
+block title
+	title 微票儿2015年度盘点
+block append content 
+	.wrapper#wrapper
+		include ../tmp/jade/loading
+		.anim-title
+		.white
+		.bg-box
+			img(src="images/bg-1.png")
+			.bg-instro
+		.wrap-xiaopiao
+			.xiaopiao
+			.xiaopiao-shadow1
+			.xiaopiao-shadow2
+			.ball
+		.butn_check#butnCheck
+		.butn_Renzui#butnRenzui
+		img.blackboard(src="images/blackboard.png")
+		.mask
+		<!--- lunbo pic -->
+		.swiper-container
+			.swiper-wrapper
+				.swiper-slide
+					.pic.pic1
+				.swiper-slide
+					.pic.pic2
+				.swiper-slide
+					.pic.pic3
+				.swiper-slide
+					.pic.pic4
+				.swiper-slide
+					.pic.pic5
+				.swiper-slide
+					.pic.pic6
+				.swiper-slide
+					.pic.pic7
+				.swiper-slide
+					.pic.pic8
+			.swiper-button-next
+			.swiper-button-prev
+		.wrap-superman
+			.superman
+			.mask-bg
+			.mask-word
+			img.word(src="images/word.jpg")
+			img.logo(src="images/logo.png")
+		//- audio#camera(src="media/camera.WAV" loop)
+		//- audio#lightning(src="media/lightning.WAV")
+		.music_icon
+		audio#audio(src="media/bg.mp3" loop)
+	
+			
+block append headscript
+	script(src="js/swiper.min.js")
+	script(src="js/app.js")
+	
+	script.
+		/*- ---- swiper ----*/
+		var swiper = new Swiper('.swiper-container', {
+				nextButton: '.swiper-button-next',
+				prevButton: '.swiper-button-prev',
+				spaceBetween: 30
+		});
+		/*- ---- share----*/
+		var URL= 'http://weixin.wepiao.com/huodong/wx/20160203/nianzhongpandian';
+		var share_img_url = URL+"/images/share.jpg";
+		WxBridge.share({
+				'imgUrl' : share_img_url, // 图片地址
+				'link' : window.location.href, // 链接地址
+				'title' : '分享一只朋友圈出名的胖子', // 分享标题
+				'desc' : '猴年从心出发，一起认真玩！' // 分享内容
+		});
+
+
+			
+			

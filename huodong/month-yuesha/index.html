@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>八月约啥?</title>
+    <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name='apple-touch-fullscreen' content='yes'>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        @media only screen and (min-device-width: 1080px) and (-webkit-min-device-pixel-ratio: 2.5){
+            .p1_bg{
+                background-image: url("images/p1-1.jpg");
+            }
+            .p2_bg{
+                background-image: url("images/p2-1.jpg");
+            }
+            .p3_bg{
+                background-image: url("images/p3-1.jpg");
+
+            }
+            .p4_bg{
+                background-image: url("images/p4-1.jpg");
+
+            }
+            .p5_bg{
+                background-image: url("images/p5-1.jpg");
+
+            }
+            .p6_bg{
+                background-image: url("images/p6-1.jpg");
+
+            }
+            .p8_bg{
+                background-image: url("images/p8-1.jpg");
+
+            }
+            .p9_bg{
+                background-image: url("images/p9-1.jpg");
+
+            }
+            .p10_bg{
+                background-image: url("images/p10-1.jpg");
+
+            }
+            .p11_bg{
+                background-image: url("images/p11-1.jpg");
+
+            }
+            .p7_bg01,.p11_bg01{
+                margin-top:-25px;
+            }
+            .buyButn{bottom:0%;}
+            .detailButn{bottom:10%;}
+            .p7-pic-01{bottom:-20%;}
+            .p7-pic-02{bottom:-4%;}
+            .text1{
+                top:44.6%;
+            }
+            .text2{
+                top:43.6%;
+            }
+            .text3{
+                top:44.6%;
+            }
+            .text4{
+                top:42.6%;
+            }
+            .text5{
+                top:43.3%;
+            }
+            .text6{
+                top:43.3%;
+            }
+            .text7{
+                top:43.3%;
+            }
+            .top{
+                height:205px;
+            }
+            .end_pic01{
+                width:85%;
+            }
+            .ticketButn{
+                width:51%;
+            }
+        }
+
+        @media screen and (device-height: 416px) {
+            .p1_bg{
+                background-image: url("images/p1-1.jpg");
+
+            }
+            .p2_bg{
+                background-image: url("images/p2-1.jpg");
+            }
+            .p3_bg{
+                background-image: url("images/p3-1.jpg");
+
+            }
+            .p4_bg{
+                background-image: url("images/p4-1.jpg");
+
+            }
+            .p5_bg{
+                background-image: url("images/p5-1.jpg");
+
+            }
+            .p6_bg{
+                background-image: url("images/p6-1.jpg");
+
+            }
+            .p8_bg{
+                background-image: url("images/p8-1.jpg");
+
+            }
+            .p9_bg{
+                background-image: url("images/p9-1.jpg");
+
+            }
+            .p10_bg{
+                background-image: url("images/p10-1.jpg");
+
+            }
+            .p11_bg{
+                background-image: url("images/p11-1.jpg");
+
+            }
+            .buyButn{bottom:0%;}
+            .detailButn{bottom:10%;}
+
+            .p7-pic-02{bottom:-4%;}
+            .text1{
+                top:44.6%;
+            }
+            .text2{
+                top:43.6%;
+            }
+            .text3{
+                top:44.6%;
+            }
+            .text4{
+                top:42.6%;
+            }
+            .text5{
+                top:43.3%;
+            }
+            .text6{
+                top:43.3%;
+            }
+            .text7{
+                top:43.3%;
+            }
+            .top{
+                height:205px;
+            }
+            .end_pic01{
+                width:85%;
+            }
+            .ticketButn{
+                width:51%;
+            }
+        }
+    </style>
+</head>
+<script>
+    var eventsConfig = {
+        'preLoadImgs' : [
+            "images/loading.gif",
+            "images/bottom-pic.png",
+            'images/lead_bg.jpg',
+            'images/p1.jpg',
+            'images/p1-1.jpg',
+            'images/p2.jpg',
+            'images/p2-1.jpg',
+            'images/p3.jpg',
+            'images/p4.jpg',
+            'images/p4-1.jpg',
+            'images/p5.jpg',
+            'images/p5-1.jpg',
+            'images/p6.jpg' ,
+            'images/p6-1.jpg' ,
+            'images/p7.jpg',
+            'images/p7-1.jpg',
+            'images/p8.jpg',
+            'images/p8-1.jpg',
+            'images/p9.jpg',
+            'images/p9-1.jpg',
+            'images/p10.jpg',
+            'images/p10-1.jpg',
+            'images/p11.jpg',
+            'images/p11-1.jpg',
+            'images/cover_bg.jpg',
+            'images/detailButn.png',
+            'images/logo.png',
+            'images/detailButn.png',
+            'images/type.png',
+            'images/bottom-pic.png',
+
+        ],
+        // 是否循环
+        // cycle 上下都循环
+        // down  无限往下，往上只能到第一页
+        // false 不循环
+        'cycle' : 'down'
+    }
+</script>
+
+<body>
+<div class="mask_loading">
+    <div class="loading">
+        <img class="icon-loading" src="images/loading.gif" >
+        <i class="text-loading">约么？</i>
+    </div>
+</div>
+<div class="orientation_set">
+    <div><img src="images/orientation.png">
+        <br>请将屏幕竖向浏览</div>
+</div>
+
+<div id="slide">
+    <img id="weixinShareImg" src="images/share.jpg">
+    <section id="scene_1" class="scene cover_bg firstScene">
+        <div class="box">
+            <div class="inner-box">
+                <img src="images/p1-text-01.png">
+                <img src="images/p1-text-02.png" class="p1-text-02 show">
+                <div class="xiaopiao">
+                    <img src="images/xiaopiao.png">
+                </div>
+                <div class="xiaopiao-1 ">
+                    <img src="images/xiaopiao-1.png">
+                </div>
+            </div>
+        </div>
+        <div class="p1-text-03">
+            <img src="images/p1-text-03.png">
+        </div>
+        <div class="slide-arrow"><img src="images/arrow.png" alt=""></div>
+        <div class="curl"></div>
+    </section>
+
+    <section id="scene_2" class="scene lead_bg">
+        <div  class="circle">
+            <img src="images/circle.png">
+        </div>
+        <ul class="lead-text-box">
+            <li class="lead-text8 show">
+                <img src="images/lead_text08.png">
+            </li>
+             <li class="lead-text7 show">
+                <img src="images/lead_text07.png">
+            </li>
+             <li class="lead-text6 show">
+                <img src="images/lead_text06.png">
+            </li>
+             <li class="lead-text5 show">
+                <img src="images/lead_text05.png">
+            </li>
+            <li class="lead-text4 show">
+                <img src="images/lead_text04.png">
+            </li>
+            <li class="lead-text3 show">
+                <img src="images/lead_text03.png">
+            </li>
+            <li class="lead-text2 show">
+                <img src="images/lead_text02.png">
+            </li>
+            <li class="lead-text1 show">
+                <img src="images/lead_text01.png">
+            </li>
+            <img src="images/lead_textBg.png" class="lead-text">
+        </ul>
+        <div class="slide-arrow"><img src="images/arrow.png" alt=""></div>
+    </section>
+
+    <section id="scene_3" class="scene p1_bg">
+        <div class="logo logo1">
+            <img src="images/logo-blank.png">
+        </div>
+        <div class="type type1">
+            <img src="images/type_blank.png">
+        </div>
+        <div  class="text1 show">
+        <img src="images/text1.png" alt="">
+        </div>
+        <div  class="bottom-pic bottom-pic1">
+            <img src="images/bottom-blank.png" alt="">
+        </div>
+        <a href="http://wx.wepiao.com/movie_detail.html?movie_id=5520" class="detailButn detailButn1  ">
+            <img src="images/detailButton_blank.png">
+        </a>
+        <div class="slide-arrow"><img src="images/arrow.png" alt=""></div>
+    </section>
+
+    <section id="scene_4" class="scene p2_bg">
+        <div class="logo logo2">
+            <img src="images/logo-blank.png">
+        </div>
+        <div class="type type2">
+            <img src="images/type_blank.png">
+        </div>
+        <div  class="text2 show">
+            <img src="images/text2.png" alt="">
+        </div>
+        <div  class="bottom-pic bottom-pic2">
+            <img src="images/bottom-blank.png" alt="">
+        </div>
+        <a href="http://wx.wepiao.com/movie_detail.html?movie_id=5426" class="detailButn detailButn2  ">
+            <img src="images/detailButton_blank.png">
+        </a>
+        <div class="slide-arrow"><img src="images/arrow.png" alt=""></div>
+    </section>
+
+    <section id="scene_5" class="scene p3_bg">
+        <div class="logo logo3">
+            <img src="images/logo-blank.png">
+        </div>
+        <div class="type type3">
+            <img src="images/type_blank.png">
+        </div>
+        <div  class="text3 show">
+            <img src="images/text3.png" alt="">
+        </div>
+        <div  class="bottom-pic bottom-pic3">
+            <img src="images/bottom-blank.png" alt="">
+        </div>
+        <a href=" http://wx.wepiao.com/movie_detail.html?movie_id=5573" class="detailButn detailButn3 ">
+            <img src="images/detailButton_blank.png">
+        </a>
+        <div class="slide-arrow"><img src="images/arrow.png" alt=""></div>
+    </section>
+
+    <section id="scene_6" class="scene p4_bg" >
+        <div class="logo logo4">
+            <img src="images/logo-blank.png">
+        </div>
+        <div class="type type4">
+            <img src="images/type_blank.png">
+        </div>
+        <div  class="text4 show">
+            <img src="images/text4.png" alt="">
+        </div>
+        <div  class="bottom-pic bottom-pic4">
+            <img src="images/bottom-blank.png" alt="">
+        </div>
+        <a href="http://wx.wepiao.com/movie_detail.html?movie_id=5532" class="detailButn detailButn4  ">
+            <img src="images/detailButton_blank.png">
+        </a>
+        <div class="slide-arrow"><img src="images/arrow.png" alt=""></div>
+    </section>
+
+    <section id="scene_7" class="scene p11_bg" >
+        <div class="logo logo5">
+            <img src="images/logo-blank.png">
+        </div>
+        <div class="type type10" style="background:none">
+            <img src="images/type10.png">
+        </div>
+        <div  class="text7 show">
+            <img src="images/text7.png" alt="">
+        </div>
+        <div  class="bottom-pic bottom-pic10">
+            <img src="images/bottom-pic10.png" alt="">
+        </div>
+        <a href="http://wx.wepiao.com/movie_detail.html?movie_id=5787" class="detailButn detailButn10  " style="background:none">
+            <img src="images/detailButn10.png">
+        </a>
+        <div class="slide-arrow"><img src="images/arrow.png" alt=""></div>
+    </section>
+
+    <section id="scene_8" class="scene p5_bg">
+        <div class="logo logo5">
+            <img src="images/logo-blank.png">
+        </div>
+        <div class="type type5">
+            <img src="images/type_blank.png">
+        </div>
+        <div  class="text5 show">
+            <img src="images/text5.png" alt="">
+        </div>
+        <div  class="bottom-pic bottom-pic5">
+            <img src="images/bottom-blank.png" alt="">
+        </div>
+        <a href="http://wx.wepiao.com/movie_detail.html?movie_id=5686" class="detailButn detailButn5  ">
+            <img src="images/detailButton_blank.png">
+        </a>
+        <div class="slide-arrow"><img src="images/arrow.png" alt=""></div>
+    </section>
+
+    <section id="scene_9" class="scene p6_bg">
+        <div class="logo logo6">
+            <img src="images/logo-blank.png">
+        </div>
+        <div class="type type6">
+            <img src="images/type_blank.png">
+        </div>
+        <div  class="text6 show">
+            <img src="images/text6.png" alt="">
+        </div>
+        <div  class="bottom-pic bottom-pic6">
+            <img src="images/bottom-blank.png" alt="">
+        </div>
+        <a href=" http://wx.wepiao.com/movie_detail.html?movie_id=5731" class="detailButn detailButn6  ">
+            <img src="images/detailButton_blank.png">
+        </a>
+        <div class="slide-arrow"><img src="images/arrow.png" alt=""></div>
+    </section>
+
+    <section id="scene_10" class="scene">
+        <div class="top" >
+            <div class="logo logo7">
+                <img src="images/logo-blank.png">
+            </div>
+            <div class="type type7">
+                <img src="images/type_blank.png">
+            </div>
+            <div class="p7-pic-01">
+                <a href="http://wx.wepiao.com/movie_detail.html?movie_id=5468" class="button1">
+                    <img src="images/blank.png">
+                </a>
+                <img src="images/p7-pic-01.png" >
+            </div>
+            <img src="images/p7_bg01.jpg" class="p7_bg01">
+        </div>
+        <div  style="position:relative;width:100%;">
+
+            <img src="images/p7_bg02.jpg" >
+        </div>
+        <div class="p7-pic-02">
+            <a href="http://wx.wepiao.com/movie_detail.html?movie_id=5633" class="button2 ">
+                <img src="images/blank.png">
+            </a>
+            <img src="images/p7-pic-02.png">
+        </div>
+        <div class="slide-arrow"><img src="images/arrow.png" alt=""></div>
+    </section>
+
+    <section id="scene_11" class="scene">
+        <div class="top" >
+            <div class="logo logo1">
+                <img src="images/logo-blank.png">
+            </div>
+            <div class="type type1">
+                <img src="images/type_blank.png">
+            </div>
+            <div class="p7-pic-01">
+                <a href="http://wx.wepiao.com/movie_detail.html?movie_id=1745" class="button1">
+                    <img src="images/blank.png">
+                </a>
+                <img src="images/p11-pic-01.png">
+            </div>
+            <img src="images/p11_bg01.jpg" class="p11_bg01">
+        </div>
+        <div  style="position:relative;width:100%;margin-top:-28px;">
+
+            <img src="images/p11_bg02.jpg">
+        </div>
+        <div class="p7-pic-02">
+            <a href="http://wx.wepiao.com/movie_detail.html?movie_id=5727" class="button2 ">
+                <img src="images/blank.png">
+            </a>
+            <img src="images/p11-pic-02.png">
+        </div>
+        <div class="slide-arrow"><img src="images/arrow.png" alt=""></div>
+    </section>
+
+    <section id="scene_12" class="scene p8_bg">
+        <div class="logo logo8">
+            <img src="images/logo-blank.png">
+        </div>
+        <div class="type type8">
+            <img src="images/type_blank.png">
+        </div>
+        <div  class="bottom-pic bottom-pic8">
+        <img src="images/bottom-blank.png" alt="">
+        </div>
+        <a href=" http://wechat.show.wepiao.com/?page=detail&onlineId=c2e388a6da6c417da4ff4f76e2e81a6a" class="detailButn detailButn8">
+        <img src="images/detailButton_blank.png">
+        </a>
+        <div class="slide-arrow"><img src="images/arrow.png" alt=""></div>
+    </section>
+
+    <section id="scene_13" class="scene p9_bg">
+        <div class="logo logo9">
+            <img src="images/logo-blank.png">
+        </div>
+        <div class="type type9">
+            <img src="images/type_blank.png">
+        </div>
+        <div  class="bottom-pic bottom-pic9">
+        <img src="images/bottom-blank.png" alt="">
+        </div>
+        <a href=" http://wechat.show.wepiao.com/?page=detail&onlineId=cfad39f6be5f432c9c6f456591d61601" class="detailButn detailButn9">
+        <img src="images/detailButton_blank.png">
+        </a>
+        <div class="slide-arrow"><img src="images/arrow.png" alt=""></div>
+    </section>
+
+    <section id="scene_14" class="scene p10_bg">
+        <a href=" http://wap.koudaitong.com/v2/home/f0ci6gm0" class="buyButn">
+            <img src="images/buyButn.png">
+        </a>
+        <div class="slide-arrow"><img src="images/arrow.png" alt=""></div>
+    </section>
+
+    <section id="scene_15" class="scene end_bg goUpScene">
+        <div  class="end_pic01">
+            <img src="images/end_pic01.png" alt="">
+        </div>
+        <a href="http://mp.weixin.qq.com/s?__biz=MjAxMzE3NzA0MQ==&mid=241775994&idx=1&sn=c5d89458c8649ce774a8b2415773ac11#rd" class="ticketButn ticketButn1">
+            <img src="images/ticketButn1.png">
+        </a>
+        <a href="http://wx.wepiao.com/index.html?channel=mpmovie" class="ticketButn ticketButn2 ">
+            <img src="images/ticketButn2.png">
+        </a>
+        <div  class="end_pic02">
+            <img src="images/end_pic02.png" alt="">
+        </div>
+        <div  class="end_pic03">
+            <img src="images/erwema.jpg" class="erweima">
+            <img src="images/end_pic03.png" alt="">
+        </div>
+    </section>
+</div>
+
+
+<script src="js/zepto.min.js"></script>
+<script src="js/wx.js"></script>
+<script src="js/wxbridge.js"></script>
+<script src="js/index.js"></script>
+<script>
+    //     google analytics
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-58583546-8', 'auto');
+    ga('send', 'pageview');
+
+    <!--微信分享-->
+    var URL= 'http://weixin.wepiao.com/huodong/wx/20150731/yuesha';
+    var share_img_url = URL+"/images/share.jpg";
+    WxBridge.share({
+        'imgUrl' : share_img_url, // 图片地址
+        'link' : window.location.href, // 链接地址
+        'title' : '在夏天快要结束的时候，一起看场电影吧！', // 分享标题
+        'desc' : '微信电影票和你相约在夏末的八月' // 分享内容
+    });
+</script>
+
+</body>
+</html>

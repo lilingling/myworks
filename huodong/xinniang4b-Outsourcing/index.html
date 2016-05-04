@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>闺蜜4B教程</title>
+    <meta name="viewport" content="width=640,user-scalable=no" />
+    <!-- 删除苹果默认的工具栏和菜单栏 -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <!-- 设置苹果工具栏颜色 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <!-- 忽略页面中的数字识别为电话 -->
+    <meta name="format-detection" content="telephone=no"/>
+
+    <script>
+    /**
+     *  @namespace
+     **/
+    var gb = gb = gb || {};
+
+    gb.ImageLoader = {
+        load: function (params) {
+            var images = params.images;
+            if (!images || !images.length) {
+                if (params.onError) params.onError("There are no images to load.");
+                else if (console && console.log) console.log("There are no images to load.");
+                return;
+            }
+            var thread = params.thread || 16, threadCounter = 0;
+            var len = images.length, counter = 0, pos = 0;
+            loadImages();
+
+            function loadImages() {
+                for (var i=threadCounter; i<thread; ++i) {
+                    var image = images[pos++];
+                    if (!image) break;
+                    loadImage(image);
+                }
+            }
+
+            function loadImage(src) {
+                ++threadCounter;
+                var img = new Image();
+                img.onload = function () {
+                    params.onUpdate && params.onUpdate(Math.floor(100 * counter / len), counter+1, len);
+                    onImageLoaded();
+                }
+                img.onerror = function() {
+                    params.onError && params.onError("cannot load "+src);
+                    onImageLoaded();
+                }
+                img.src = src;
+            }
+
+            function onImageLoaded() {
+                --threadCounter;
+                if (++counter == len) {
+                    params.onComplete && params.onComplete();
+                } else {
+                    loadImages();
+                }
+            }
+        }
+    };
+
+    //  Global static
+    //  weiixn start
+    var wxapp = {
+        listProArr:[],
+        listComArr:[]
+    };
+
+    // wxapp.addPro = function(fun_){
+    //     wxapp.listProArr.push(fun_);
+    // };
+    // wxapp.addCom = function(fun_){
+    //     wxapp.listComArr.push(fun_);
+    // };
+
+    //声明资源文件列表
+    wxapp.fileList = [];
+    wxapp.fileList.push('img/index-bg.jpg');
+    wxapp.fileList.push('img/index-fanye.png');
+    wxapp.fileList.push('img/index-img1.png');
+    wxapp.fileList.push('img/index-img2.png');
+    wxapp.fileList.push('img/index-sibi.png');
+    wxapp.fileList.push('img/page2-bg.jpg');
+    wxapp.fileList.push('img/page2-fanye.png');
+    wxapp.fileList.push('img/page2-head.png');
+    wxapp.fileList.push('img/page2-img1.png');
+    wxapp.fileList.push('img/page2-img2.png');
+    wxapp.fileList.push('img/page2-img3.png');
+    wxapp.fileList.push('img/page2-qiaokeli1.png');
+    wxapp.fileList.push('img/page2-qiaokeli2.png');
+    wxapp.fileList.push('img/page2-txt1.png');
+    wxapp.fileList.push('img/page2-txt2.png');
+    wxapp.fileList.push('img/page2-yanwu.gif');
+    wxapp.fileList.push('img/yejiao.gif');
+
+    wxapp.fileList2 = [];
+    wxapp.fileList2.push('img/page3-bg.jpg');
+    wxapp.fileList2.push('img/page3-f2.png');
+    wxapp.fileList2.push('img/page3-goufudai.gif');
+    wxapp.fileList2.push('img/page3-head.png');
+    wxapp.fileList2.push('img/page3-img1.png');
+    wxapp.fileList2.push('img/page3-img2.png');
+    wxapp.fileList2.push('img/page3-img3.png');
+    wxapp.fileList2.push('img/page3-img4.png');
+    wxapp.fileList2.push('img/page3-img5.png');
+    wxapp.fileList2.push('img/page3-img6.png');
+    wxapp.fileList2.push('img/page3-jiubei.gif');
+    wxapp.fileList2.push('img/page3-txt1.png');
+    wxapp.fileList2.push('img/page3-zb.png');
+    wxapp.fileList2.push('img/page4-2b.png');
+    wxapp.fileList2.push('img/page4-2b1.png');
+    wxapp.fileList2.push('img/page4-2b2.png');
+    wxapp.fileList2.push('img/page4-2b3.png');
+    wxapp.fileList2.push('img/page4-2b4.png');
+    wxapp.fileList2.push('img/page4-2b5.png');
+    wxapp.fileList2.push('img/page4-4b.png');
+    wxapp.fileList2.push('img/page4-bg.jpg');
+    wxapp.fileList2.push('img/page4-dianji.png');
+    wxapp.fileList2.push('img/page4-head1.png');
+    wxapp.fileList2.push('img/page4-head2.png');
+    wxapp.fileList2.push('img/page4-head3.png');
+    wxapp.fileList2.push('img/page4-head4.png');
+    wxapp.fileList2.push('img/page4-head5.png');
+    wxapp.fileList2.push('img/page4-line.png');
+    wxapp.fileList2.push('img/page4-txt1.png');
+    wxapp.fileList2.push('img/page5-dianji.png');
+    wxapp.fileList2.push('img/page5-head1.png');
+    wxapp.fileList2.push('img/page5-head2.png');
+    wxapp.fileList2.push('img/page5-head3.png');
+    wxapp.fileList2.push('img/page5-head4.png');
+    wxapp.fileList2.push('img/page5-img1.png');
+    wxapp.fileList2.push('img/page5-txt1.png');
+    wxapp.fileList2.push('img/page5-txt2.png');
+    wxapp.fileList2.push('img/page5-txt3.png');
+    wxapp.fileList2.push('img/page5-vs.png');
+    wxapp.fileList2.push('img/page5-wenhao1.png');
+    wxapp.fileList2.push('img/page5-wenhao2.png');
+    wxapp.fileList2.push('img/page6-btn.png');
+    wxapp.fileList2.push('img/page6-img1.png');
+    wxapp.fileList2.push('img/page6-img2.png');
+    wxapp.fileList2.push('img/page6-logo.png');
+    wxapp.fileList2.push('img/page6-pople1.png');
+    wxapp.fileList2.push('img/page6-pople2.png');
+    wxapp.fileList2.push('img/page6-pople3.png');
+    wxapp.fileList2.push('img/page6-txt1.png');
+    wxapp.fileList2.push('img/page6-txt2.png');
+    wxapp.fileList2.push('img/page5-dajia.gif');
+    
+    //  weiixn end
+    var app;
+    var config;
+    </script>
+    
+    <link href="dev/css/style.css" rel="stylesheet" />
+    <script src="dev/js/zepto.min.js"></script>
+    <script src="dev/js/app.js"></script>
+    <script src="dev/js/jweixin-1.0.0.js"></script>
+    <script src="dev/js/wxjs_verif.js"></script>
+    
+</head>
+<body>
+    
+    <div class="body">
+        <div id="minisite">
+            
+            <div id="Panel_loading" class="loaders" style="background-color:#000;z-index:999;">
+                
+                <img src="img/loading-bg.jpg" class="page-bg" />
+                <img src="img/loading-img.png" class="loading-img" />
+
+                <span class="loging-txt"></span>
+
+            </div>
+
+        </div>    
+    
+
+        <div class="music"><img src="img/music-on.png" /></div>
+        
+
+    </div>
+
+    <div class="orientation_set">
+        <div>
+            <img src="img/orientation.png" width="50" alt="" class="translate" />
+            <br ／>请将屏幕竖向浏览
+        </div>
+    </div>
+
+    <audio id="bg" src="media/bg.mp3" loop="loop" width="0" height="0"></audio>
+    
+    
+
+</body>
+</html>
+

@@ -1,0 +1,80 @@
+extends ../base
+
+block title
+	title 8月约啥
+block append content
+	include ../pagelets/loading.jade
+	include ../pagelets/orientation_set.jade
+	div#slide
+		img#weixinShareImg(src="images/share.jpg")
+		section#scene_1.scene.cover_bg
+			div.box
+				div.inner-box
+					img(src="images/cover-text-01.png")
+					img.p1-text-02.show(src="images/cover-text-02.png")
+					div.xiaopiao
+						img(src="images/xiaopiao.png")
+					div.xiaopiao-1
+						img(src="images/xiaopiao-1.png")
+			div.cover-text-03
+				img(src="images/cover-text-03.png")
+			div.curl
+			div.slide-arrow
+				img(src="images/arrow.png")
+		section#scene_2.scene.lead_bg
+			div.slide-arrow
+				img(src="images/arrow.png")
+		-for(var x = 1; x < 10; x++)
+			-if(x==1)
+				section.scene.firstScene(class="p"+x+"_bg")(id="scene_"+(x+2))
+					div.logo(class="logo"+x)
+						img(src="images/logo-blank.png")
+					type.type(class="type"+x)
+						img(src="images/type_blank.png")
+					div.show(class="text"+x)
+						img(src="images/text"+x+".png")
+					div.bottom-pic(class="bottom-pic"+x)
+						img(src="images/bottom-blank.png")
+					a.detailButn(class="detailButn"+x)(href="http://wx.wepiao.com/movie_detail.html?movie_id=")
+						img(src="images/detailButton_blank.png")
+					div.slide-arrow
+						img(src="images/arrow.png")				
+			-else
+				section.scene(class="p"+x+"_bg")(id="scene_"+(x+2))
+					div.logo(class="logo"+x)
+						img(src="images/logo-blank.png")
+					type.type(class="type"+x)
+						img(src="images/type_blank.png")
+					div.show(class="text"+x)
+						img(src="images/text"+x+".png")
+					div.bottom-pic(class="bottom-pic"+x)
+						img(src="images/bottom-blank.png")
+					a.detailButn(class="detailButn"+x)(href="http://wx.wepiao.com/movie_detail.html?movie_id=")
+						img(src="images/detailButton_blank.png")
+					div.slide-arrow
+						img(src="images/arrow.png")
+		section#scene_12.scene.p10_bg
+			a.buyButn(href="#")
+				img(src="images/buyButn.png")
+		section#scene_13.scene.end_bg
+			div.end_pic01
+				img(src="images/end_pic01.png")
+			a.ticketButn.ticketButn1(href="#")
+				img(src="images/ticketButn1.png")
+			a.ticketButn.ticketButn2(href="#")
+				img(src="images/ticketButn2.png")
+			div.end_pic02
+				img(src="images/end_pic02.png")
+			div.end_pic03
+				img.erweima(src="images/erwema.jpg")
+				img(src="images/end_pic03.png")
+	script(src="./script/index.js")
+	script(src="./script/share_analytics.js")
+
+
+		
+
+
+		
+	
+	

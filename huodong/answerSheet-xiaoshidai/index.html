@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>让我们再作一次</title>
+    <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name='apple-touch-fullscreen' content='yes'>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<script>
+    var eventsConfig = {
+        'preLoadImgs' : [
+            "images/loading.gif",
+            'images/cover-01.jpg',
+            'images/cover-02.jpg',
+            'images/title.jpg',
+            'images/pic01.jpg',
+            'images/pic02.jpg',
+            'images/pic03.jpg',
+            'images/pic04.jpg',
+            'images/pic05.jpg',
+            'images/button.png',
+            'images/button-active.png',
+            'images/resultBg01.jpg',
+            'images/resultBg02.jpg',
+            'images/score.jpg',
+            'images/score1.jpg',
+        ],
+        // 是否循环
+        // cycle 上下都循环
+        // down  无限往下，往上只能到第一页
+        // false 不循环
+        'cycle' : 'down'
+    }
+</script>
+
+<body>
+<div class="mask mask_loading">
+    <div class="loading">
+        <img class="icon-loading" src="images/loading.gif" >
+        <i class="text-loading">作死终结篇</i>
+    </div>
+</div>
+<div class="orientation_set">
+    <div><img src="images/orientation.png" width="50" alt="" class='translate'>
+        <br>请将屏幕竖向浏览</div>
+</div>
+
+<div id="slide">
+    <img id="weixinShareImg" src="images/share.jpg" style="position:absolute;z-index:-1;top:-9999px;" >
+    <section id="scene_1" class="scene cover-bg firstScene">
+        <div class="box">
+            <div class="subTitle-01 movein-left">
+                <img src="images/cover-text-01.png" alt="">
+            </div>
+            <img src="images/cover-01.png">
+        </div>
+        <div class="box" style="margin-top:-2%">
+            <div class="subTitle-02 movein-right">
+                <img src="images/cover-text-02.png" alt="">
+            </div>
+            <div class="title">
+                <img src="images/title.png" alt="">
+            </div>
+            <div class="zuo">
+                <img src="images/zuo.png">
+            </div>
+            <img src="images/cover-02.png">
+        </div>
+        <div class="slide-arrow"><img src="images/arrow.png" alt=""></div>
+    </section>
+
+    <section id="scene_2" class="scene">
+        <img src="images/pic01.jpg" alt="" id="pic">
+        <div class="pic-bg">
+            <div class="rotateTriangle">
+                <img src="images/rotateTriangle01.png" id="rotateTriangle">
+            </div>
+            <div class="description show">
+                <img src="images/description01.png" id="description">
+            </div>
+            <ul class="button" >
+                <li class=" button1" data-answer="A">
+                    <img src="images/button-blank.png">
+                </li>
+                <li class=" button2" data-answer="B">
+                    <img src="images/button-blank.png">
+                </li>
+            </ul>
+            <img src="images/pic-bg.png" alt="">
+        </div>
+
+    </section>
+
+    <section id="scene_3" class="scene p3-bg">
+        <img src="images/resultBg01.jpg">
+        <div class="logo">
+            <img src="images/logo.png">
+        </div>
+        <div class="pic-bg">
+            <div class="scoreText">
+                <img src="images/scoreText-blank.png">
+            </div>
+            <div class="score">
+                <img src="images/score-blank.png">
+            </div>
+            <a class="ticketButn" href="http://wx.wepiao.com/movie_detail.html?movie_id=5425&from=4000000000" >
+                <img src="images/ticketButton.png">
+            </a>
+            <div class="result-pic02">
+                <img src="images/result-pic02.png">
+            </div>
+            <img src="images/resultBg02.png">
+        </div>
+
+    </section>
+
+    
+</div>
+
+
+<script src="js/zepto.min.js"></script>
+<script src="js/index.js"></script>
+<script src="js/wx.js"></script>
+<script src="js/wxbridge.js"></script>
+<script>
+    //     google analytics
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-58583546-8', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+<script>
+    (function(){
+        var currentIndex=1;
+        var answerA = false;
+        var answerACount=[];
+        var $button = $('.button');
+        function renderLayout(){
+            $('#pic').attr('src','images/pic0'+currentIndex+'.jpg');
+            $('#rotateTriangle').attr('src','images/rotateTriangle0'+currentIndex+'.png');
+            $('#description').attr('src','images/description0'+currentIndex+'.png');
+        };
+        var events = {
+            onclickOption : function( target ){
+                target.addClass('currentButn');
+                var answer = target.data('answer');
+                console.log(answer);
+                var answerA=(answer=='A');
+                checkAnswer( answerA );
+
+            },
+            analyticAnswer:function( target ){
+                if( currentIndex == 5){
+                    window.location.href="#scene_3";
+                    console.log(answerACount)
+                    var len=checkAnswer();
+                    console.log('len'+ len)
+                    if( len ==5 ){
+                        $('.scoreText').css('background-position','0 0');
+                        $('.score').css('background-position','0 0')
+                        var URL= 'http://weixin.wepiao.com/huodong/wx/20150715/xiaoshidai4';
+                        var share_img_url = URL+'/images/share.jpg';
+                        WxBridge.share({
+                            'imgUrl' : share_img_url, // 图片地址
+                            'link' : URL, // 链接地址
+                            'title' : '时代姐妹花作死指数100%，年度作死大作，No Zuo No Die', // 分享标题
+                            'desc' : '时代姐妹花，让我们再作一次！' // 分享内容
+                        });
+                    }
+                    if( len ==4 ){
+                        $('.scoreText').css('background-position','0 20%');
+                        $('.score').css('background-position','20% 0')
+                         var URL= 'http://weixin.wepiao.com/huodong/wx/20150715/xiaoshidai4';
+                        var share_img_url = URL+'/images/share.jpg';
+                        WxBridge.share({
+                            'imgUrl' : share_img_url, // 图片地址
+                            'link' : URL, // 链接地址
+                            'title' : '时代姐妹花作死指数80%，离作死只差一步，看完这部就满格了！', // 分享标题
+                            'desc' : '时代姐妹花，让我们再作一次！' // 分享内容
+                        });
+                    }
+                    if( len ==3 ){
+                        $('.scoreText').css('background-position','0 40%');
+                        $('.score').css('background-position','40% 0')
+                         var URL= 'http://weixin.wepiao.com/huodong/wx/20150715/xiaoshidai4';
+                        var share_img_url = 'http://weixin.wepiao.com/images/share.jpg';
+                        WxBridge.share({
+                            'imgUrl' : share_img_url, // 图片地址
+                            'link' : URL, // 链接地址
+                            'title' : '时代姐妹花作作死指数60%，看我多能忍！', // 分享标题
+                            'desc' : '时代姐妹花，让我们再作一次！' // 分享内容
+                        });
+                    }
+                    if( len ==2 ){
+                        $('.scoreText').css('background-position','0 60%');
+                        $('.score').css('background-position','60% 0')
+                        var URL= 'http://weixin.wepiao.com/huodong/wx/20150715/xiaoshidai4';
+                        var share_img_url = URL+'/images/share.jpg';
+                        WxBridge.share({
+                            'imgUrl' : share_img_url, // 图片地址
+                            'link' : URL, // 链接地址
+                            'title' : '时代姐妹花作作死指数40%，比这最作的电影多了去了！', // 分享标题
+                            'desc' : '时代姐妹花，让我们再作一次！' // 分享内容
+                        });
+                    }
+                    if( len ==1 ){
+                        $('.scoreText').css('background-position','0 80%');
+                        $('.score').css('background-position','80% 0');
+                        var URL= 'http://weixin.wepiao.com/huodong/wx/20150715/xiaoshidai4';
+                        var share_img_url = URL+'/images/share.jpg';
+                        WxBridge.share({
+                            'imgUrl' : share_img_url, // 图片地址
+                            'link' : URL, // 链接地址
+                            'title' : '时代姐妹花作作死指数20%，这不算作啊，你们的忍耐力太差了', // 分享标题
+                            'desc' : '时代姐妹花，让我们再作一次！' // 分享内容
+                        });
+                    }
+                    if( len ==0 ){
+                        $('.scoreText').css('background-position','0 100%');
+                        $('.score').css('background-position','100% 0');
+                        var URL= 'http://weixin.wepiao.com/huodong/wx/20150715/xiaoshidai4';
+                        var share_img_url = URL+'/images/share.jpg';
+                        WxBridge.share({
+                            'imgUrl' : share_img_url, // 图片地址
+                            'link' : URL, // 链接地址
+                            'title' : '时代姐妹花作作死指数0%，只能说⋯⋯我是《小时代》的真爱粉~', // 分享标题
+                            'desc' : '时代姐妹花，让我们再作一次！' // 分享内容
+                        });
+                    }
+                
+                };
+
+                currentIndex += 1;
+                target.parents(".pic-bg").removeClass("currentAction");
+                setTimeout(function(){
+                   renderLayout();
+                   target.parents(".pic-bg").addClass("currentAction");
+                   setTimeout(function(){
+                        target.removeClass("currentButn");
+                   },450);
+                },2);
+                
+            }
+        };
+        function checkAnswer( answerA ){
+            if( answerA ){
+                answerACount.push( currentIndex );
+            }
+            var len=answerACount.length;
+            return len;
+        };
+
+        function eventsBind() {
+            //alert(11111)
+            $button.on('click', 'li', function (e) {
+                var target = $(e.currentTarget);
+                events.onclickOption(target);
+                events.analyticAnswer(target);
+            });
+
+        }
+        eventsBind();
+
+        //分享
+         var URL= 'http://weixin.wepiao.com/huodong/wx/20150715/xiaoshidai4';
+                        var share_img_url = URL+'/images/share.jpg';
+                        WxBridge.share({
+                            'imgUrl' : share_img_url, // 图片地址
+                            'link' : URL, // 链接地址
+                            'title' : '《小时代4》让我们再作一次', // 分享标题
+                            'desc' : '时代姐妹花，让我们再作一次！' // 分享内容
+                        });
+        //text git
+    })();
+</script>
+
+</body>
+</html>

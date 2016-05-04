@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!--meta-->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="address=no">
+	<!--标题-->
+	<title>情人节的日常</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+
+<body>
+	<div id="wrapper" class="wrapper">
+		<div class="mask_loading">
+			<div class="loading">
+				<div class="loadEffect">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<div class="loading-process">收取中...</div>
+			</div>
+		</div>
+		<div class="wrapper_chat"></div>
+	</div>
+	<div class="box_keyboard">
+		<div class="box_input"><i class="voice"></i>
+			<span id="input" class="input"> </span><i class="face"></i><i class="add"></i></div>
+		<div class="keyboard">
+			<img src="images/emoji3.jpg" class="emoji emojitemp">
+			<div id="send" class="button_send">发送</div>
+			<div class="butn_box">
+				<div class="butn_a butn">A.我擦爹娘都开始虐狗了，我要去电影院占领单号座！</div>
+				<div class="butn_b butn"> B.帮爹妈玩一把浪漫，我也要约妹子去看电影。</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/all.min.js"></script>
+	<script>
+		var URL = 'http://weixin.wepiao.com/huodong/wx/20160203/qrjwx';
+		var share_img_url = URL + "/images/share.jpg";
+		WxBridge.share({
+			'imgUrl': share_img_url, // 图片地址
+			'link': window.location.href, // 链接地址
+			'title': '如何机智面对你妈逼你找女朋友', // 分享标题
+			'desc': '又到一年情(nue)人(gou)节（ri），面对那个“经典问题”该如果从容面对' // 分享内容
+		});
+	</script>
+	<script src="js/app.js"></script>
+</body>
+
+</html>

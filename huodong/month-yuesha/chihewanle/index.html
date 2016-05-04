@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>八月约啥?</title>
+    <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name='apple-touch-fullscreen' content='yes'>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        @media only screen and (min-device-width: 1080px) and (-webkit-min-device-pixel-ratio: 2.5){
+            .p1_bg{
+                background-image: url("images/p1-1.jpg");
+            }
+            .p2_bg{
+                background-image: url("images/p2-1.jpg");
+            }
+            .p3_bg{
+                background-image: url("images/p3-1.jpg");
+
+            }
+            .p4_bg{
+                background-image: url("images/p4-1.jpg");
+
+            }
+            .p5_bg{
+                background-image: url("images/p5-1.jpg");
+
+            }
+            .p6_bg{
+                background-image: url("images/p6-1.jpg");
+
+            }
+            .p8_bg{
+                background-image: url("images/p8-1.jpg");
+
+            }
+            .p9_bg{
+                background-image: url("images/p9-1.jpg");
+
+            }
+            .p10_bg{
+                background-image: url("images/p10-1.jpg");
+
+            }
+            .p11_bg{
+                background-image: url("images/p11-1.jpg");
+
+            }
+            .p7_bg01,.p11_bg01{
+                margin-top:-25px;
+            }
+            .buyButn{bottom:0%;}
+            .detailButn{bottom:10%;}
+            .p7-pic-01{bottom:-20%;}
+            .p7-pic-02{bottom:-4%;}
+            .text1{
+                top:44.6%;
+            }
+            .text2{
+                top:43.6%;
+            }
+            .text3{
+                top:44.6%;
+            }
+            .text4{
+                top:42.6%;
+            }
+            .text5{
+                top:43.3%;
+            }
+            .text6{
+                top:43.3%;
+            }
+            .text7{
+                top:43.3%;
+            }
+            .top{
+                height:205px;
+            }
+            .end_pic01{
+                width:85%;
+            }
+            .ticketButn{
+                width:51%;
+            }
+        }
+
+        @media only screen and (device-height:480px) and (-webkit-device-pixel-ratio:2){
+            .p1_bg{
+                background-image: url("images/p1-1.jpg");
+
+            }
+            .p2_bg{
+                background-image: url("images/p2-1.jpg");
+            }
+            .p3_bg{
+                background-image: url("images/p3-1.jpg");
+
+            }
+            .p4_bg{
+                background-image: url("images/p4-1.jpg");
+
+            }
+            .p5_bg{
+                background-image: url("images/p5-1.jpg");
+
+            }
+            .p6_bg{
+                background-image: url("images/p6-1.jpg");
+
+            }
+            .p8_bg{
+                background-image: url("images/p8-1.jpg");
+
+            }
+            .p9_bg{
+                background-image: url("images/p9-1.jpg");
+
+            }
+            .p10_bg{
+                background-image: url("images/p10-1.jpg");
+
+            }
+            .p11_bg{
+                background-image: url("images/p11-1.jpg");
+
+            }
+            .buyButn{bottom:0%;}
+            .detailButn{bottom:10%;}
+
+            .p7-pic-02{bottom:-4%;}
+            .text1{
+                top:44.6%;
+            }
+            .text2{
+                top:43.6%;
+            }
+            .text3{
+                top:44.6%;
+            }
+            .text4{
+                top:42.6%;
+            }
+            .text5{
+                top:43.3%;
+            }
+            .text6{
+                top:43.3%;
+            }
+            .text7{
+                top:43.3%;
+            }
+            .top{
+                height:205px;
+            }
+            .end_pic01{
+                width:85%;
+            }
+            .ticketButn{
+                width:51%;
+            }
+        }
+    </style>
+</head>
+<script>
+    var eventsConfig = {
+        'preLoadImgs' : [
+            "images/loading.gif",
+            'images/cover_bg.jpg',
+            'images/lead_bg.jpg',
+            'images/p1.jpg',
+            'images/p1-1.jpg',
+            'images/p2.jpg',
+            'images/p2-1.jpg',
+            'images/p3.jpg',
+            'images/p4.jpg',
+            'images/p4-1.jpg',
+            'images/p5.jpg',
+            'images/p5-1.jpg',
+            'images/p6.jpg' ,
+            'images/p6-1.jpg' ,
+            'images/p11.jpg',
+            'images/p11-1.jpg',
+            'images/detailButn.png',
+            'images/detailButn.png',
+            'images/type.png',
+            'images/bottom-pic.png',
+        ],
+        // 是否循环
+        // cycle 上下都循环
+        // down  无限往下，往上只能到第一页
+        // false 不循环
+        'cycle' : 'down'
+    }
+</script>
+
+<body>
+<div class="mask_loading">
+    <div class="loading">
+        <img class="icon-loading" src="images/loading.gif" >
+        <i class="text-loading">约么？</i>
+    </div>
+</div>
+<div class="orientation_set">
+    <div><img src="images/orientation.png">
+        <br>请将屏幕竖向浏览</div>
+</div>
+
+<div id="slide">
+    <img id="weixinShareImg" src="images/share.jpg">
+    <section id="scene_1" class="scene cover_bg firstScene">
+        <div class="box">
+            <div class="inner-box">
+                <img src="images/p1-text-01.png">
+                <img src="images/p1-text-02.png" class="p1-text-02 show">
+                <div class="xiaopiao">
+                    <img src="images/xiaopiao.png">
+                </div>
+                <div class="xiaopiao-1 ">
+                    <img src="images/xiaopiao-1.png">
+                </div>
+            </div>
+        </div>
+        <div class="p1-text-03">
+            <img src="images/p1-text-03.png">
+        </div>
+        <div class="slide-arrow"><img src="images/arrow.png" alt=""></div>
+        <div class="curl"></div>
+    </section>
+
+    <section id="scene_2" class="scene lead_bg">
+        <div  class="circle">
+            <img src="images/circle.png">
+        </div>
+        <ul class="lead-text-box">
+            <li class="lead-text8 show">
+                <img src="images/lead_text08.png">
+            </li>
+             <li class="lead-text7 show">
+                <img src="images/lead_text07.png">
+            </li>
+             <li class="lead-text6 show">
+                <img src="images/lead_text06.png">
+            </li>
+             <li class="lead-text5 show">
+                <img src="images/lead_text05.png">
+            </li>
+            <li class="lead-text4 show">
+                <img src="images/lead_text04.png">
+            </li>
+            <li class="lead-text3 show">
+                <img src="images/lead_text03.png">
+            </li>
+            <li class="lead-text2 show">
+                <img src="images/lead_text02.png">
+            </li>
+            <li class="lead-text1 show">
+                <img src="images/lead_text01.png">
+            </li>
+            <img src="images/lead_textBg.png" class="lead-text">
+        </ul>
+        <div class="slide-arrow"><img src="images/arrow.png" alt=""></div>
+    </section>
+
+    <section id="scene_3" class="scene p1_bg">
+        <div class="type type1">
+            <img src="images/type_blank.png">
+        </div>
+        <div  class="text1 show">
+        <img src="images/text1.png" alt="">
+        </div>
+        <div  class="bottom-pic bottom-pic1">
+            <img src="images/bottom-blank.png" alt="">
+        </div>
+        <a hhref="http://web.p.qq.com/qqmpmobile/coupon/moviedetail.html?_bid=108&__wv=5123&_wv=5121&shop_id=2003&city=&followid=19291" class="detailButn detailButn1  ">
+            <img src="images/detailButton_blank.png">
+        </a>
+        <div class="slide-arrow"><img src="images/arrow.png" alt=""></div>
+    </section>
+
+    <section id="scene_4" class="scene p2_bg">
+        <div class="type type2">
+            <img src="images/type_blank.png">
+        </div>
+        <div  class="text2 show">
+            <img src="images/text2.png" alt="">
+        </div>
+        <div  class="bottom-pic bottom-pic2">
+            <img src="images/bottom-blank.png" alt="">
+        </div>
+        <a hhref="http://web.p.qq.com/qqmpmobile/coupon/moviedetail.html?_bid=108&__wv=5123&_wv=5121&shop_id=2006&city=&followid=19291" class="detailButn detailButn2  ">
+            <img src="images/detailButton_blank.png">
+        </a>
+        <div class="slide-arrow"><img src="images/arrow.png" alt=""></div>
+    </section>
+
+    <section id="scene_5" class="scene p3_bg">
+        <div class="type type3">
+            <img src="images/type_blank.png">
+        </div>
+        <div  class="text3 show">
+            <img src="images/text3.png" alt="">
+        </div>
+        <div  class="bottom-pic bottom-pic3">
+            <img src="images/bottom-blank.png" alt="">
+        </div>
+        <a hhref="http://web.p.qq.com/qqmpmobile/coupon/moviedetail.html?stype=11001&shop_id=1992&city=%E6%B7%B1%E5%9C%B3&isPresell=1&isNoShowMoive=1&_bid=108&r1=11001&r2=22001&r3=32003&stype=11001&operid=1003&_wv=5123" class="detailButn detailButn3 ">
+            <img src="images/detailButton_blank.png">
+        </a>
+        <div class="slide-arrow"><img src="images/arrow.png" alt=""></div>
+    </section>
+
+    <section id="scene_6" class="scene p4_bg" >
+        <div class="type type4">
+            <img src="images/type_blank.png">
+        </div>
+        <div  class="text4 show">
+            <img src="images/text4.png" alt="">
+        </div>
+        <div  class="bottom-pic bottom-pic4">
+            <img src="images/bottom-blank.png" alt="">
+        </div>
+        <a hhref="http://web.p.qq.com/qqmpmobile/coupon/moviedetail.html?stype=11001&shop_id=2010&city=%E6%B7%B1%E5%9C%B3&isNoShowMoive=1&_bid=108&r1=11001&r2=22001&r3=32003&stype=11001&operid=1003&_wv=5123#sid=" class="detailButn detailButn4  ">
+            <img src="images/detailButton_blank.png">
+        </a>
+        <div class="slide-arrow"><img src="images/arrow.png" alt=""></div>
+    </section>
+
+    <section id="scene_7" class="scene p11_bg" >
+        <div class="type type10" style="background:none">
+            <img src="images/type10.png">
+        </div>
+        <div  class="text7 show">
+            <img src="images/text7.png" alt="">
+        </div>
+        <div  class="bottom-pic bottom-pic10">
+            <img src="images/bottom-pic10.png" alt="">
+        </div>
+        <a hhref="http://web.p.qq.com/qqmpmobile/coupon/moviedetail.html?stype=11001&shop_id=2012&city=%E6%B7%B1%E5%9C%B3&isNoShowMoive=1&_bid=108&r1=11001&r2=22001&r3=32003&stype=11001&operid=1003&_wv=5123#sid=" class="detailButn detailButn10  " style="background:none">
+            <img src="images/detailButn10.png">
+        </a>
+        <div class="slide-arrow"><img src="images/arrow.png" alt=""></div>
+    </section>
+
+    <section id="scene_8" class="scene p5_bg">
+        <div class="type type5">
+            <img src="images/type_blank.png">
+        </div>
+        <div  class="text5 show">
+            <img src="images/text5.png" alt="">
+        </div>
+        <div  class="bottom-pic bottom-pic5">
+            <img src="images/bottom-blank.png" alt="">
+        </div>
+        <a hhref="http://web.p.qq.com/qqmpmobile/coupon/moviedetail.html?stype=11001&shop_id=1956&city=%E6%B7%B1%E5%9C%B3&isNoShowMoive=1&_bid=108&r1=11001&r2=22001&r3=32003&stype=11001&operid=1003&_wv=5123#sid=" class="detailButn detailButn5  ">
+            <img src="images/detailButton_blank.png">
+        </a>
+        <div class="slide-arrow"><img src="images/arrow.png" alt=""></div>
+    </section>
+
+    <section id="scene_9" class="scene p6_bg">
+
+        <div class="type type6">
+            <img src="images/type_blank.png">
+        </div>
+        <div  class="text6 show">
+            <img src="images/text6.png" alt="">
+        </div>
+        <div  class="bottom-pic bottom-pic6">
+            <img src="images/bottom-blank.png" alt="">
+        </div>
+        <a hhref="http://web.p.qq.com/qqmpmobile/coupon/moviedetail.html?stype=11001&shop_id=2009&city=%E6%B7%B1%E5%9C%B3&isNoShowMoive=1&_bid=108&r1=11001&r2=22001&r3=32003&stype=11001&operid=1003&_wv=5123#sid=" class="detailButn detailButn6  ">
+            <img src="images/detailButton_blank.png">
+        </a>
+        <div class="slide-arrow"><img src="images/arrow.png" alt=""></div>
+    </section>
+
+    <section id="scene_10" class="scene">
+        <div class="top" >
+            <div class="type type7">
+                <img src="images/type_blank.png">
+            </div>
+            <div class="p7-pic-01">
+                <a hhref="http://web.p.qq.com/qqmpmobile/coupon/moviedetail.html?_bid=108&__wv=5123&_wv=5121&shop_id=2005&city=&followid=19291" class="button1">
+                    <img src="images/blank.png">
+                </a>
+                <img src="images/p7-pic-01.png" >
+            </div>
+            <img src="images/p7_bg01.jpg" class="p7_bg01">
+        </div>
+        <div  style="position:relative;width:100%;">
+
+            <img src="images/p7_bg02.jpg" >
+        </div>
+        <div class="p7-pic-02">
+            <a hhref="http://web.p.qq.com/qqmpmobile/coupon/moviedetail.html?stype=11001&shop_id=1939&city=%E6%B7%B1%E5%9C%B3&isNoShowMoive=1&_bid=108&r1=11001&r2=22001&r3=32003&stype=11001&operid=1003&_wv=5123#sid=" class="button2 ">
+                <img src="images/blank.png">
+            </a>
+            <img src="images/p7-pic-02.png">
+        </div>
+        <div class="slide-arrow"><img src="images/arrow.png" alt=""></div>
+    </section>
+
+    <section id="scene_11" class="scene">
+        <div class="top" >
+            <div class="type type1">
+                <img src="images/type_blank.png">
+            </div>
+            <div class="p7-pic-01">
+                <a hhref="http://web.p.qq.com/qqmpmobile/coupon/moviedetail.html?stype=11001&shop_id=1745&city=%E6%B7%B1%E5%9C%B3&isNoShowMoive=1&_bid=108&r1=11001&r2=22001&r3=32003&stype=11001&operid=1003&_wv=5123#sid=" class="button1">
+                    <img src="images/blank.png">
+                </a>
+                <img src="images/p11-pic-01.png">
+            </div>
+            <img src="images/p11_bg01.jpg" class="p11_bg01">
+        </div>
+        <div  style="position:relative;width:100%;margin-top:-28px;">
+
+            <img src="images/p11_bg02.jpg">
+        </div>
+        <div class="p7-pic-02">
+            <a hhref="http://web.p.qq.com/qqmpmobile/coupon/moviedetail.html?stype=11001&shop_id=2015&city=%E6%B7%B1%E5%9C%B3&isNoShowMoive=1&_bid=108&r1=11001&r2=22001&r3=32003&stype=11001&operid=1003&_wv=5123#sid=" class="button2 ">
+                <img src="images/blank.png">
+            </a>
+            <img src="images/p11-pic-02.png">
+        </div>
+        <div class="slide-arrow"><img src="images/arrow.png" alt=""></div>
+    </section>
+
+    <section id="scene_12" class="scene end_bg goUpScene">
+        <div  class="end_pic01">
+            <img src="images/end_pic01.png" alt="">
+        </div>
+        <a hhref="http://web.p.qq.com/qqmpmobile/coupon/nearby2.html?_bid=108&r1=11001&r2=22001&stype=11001&_wv=5123&category=%E5%A8%B1%E4%B9%90&subCategory=%E7%94%B5%E5%BD%B1&sort=%E9%99%84%E8%BF%91%E4%BC%98%E5%85%88&operid=1003" class="ticketButn ticketButn2 ">
+            <img src="images/ticketButn2.png">
+        </a>
+        <div  class="end_pic02">
+            <img src="images/end_pic02.png" alt="">
+        </div>
+        <div  class="end_pic03">
+            <img src="images/end_pic03.png" alt="">
+        </div>
+    </section>
+</div>
+
+<script src="js/zepto.min.js"></script>
+<script src="js/index.js"></script>
+<script src="http://pub.idqqimg.com/qqmobile/qqapi.js?_bid=152"></script>
+<script src="js/report.js"></script>
+<script>
+    //     google analytics
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-58583546-8', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

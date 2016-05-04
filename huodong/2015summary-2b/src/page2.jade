@@ -1,0 +1,84 @@
+extends ../tmp/jade/base
+
+block title
+	title 年终2C总结
+block append content 
+	.wrapper#wrapper
+		.wrapper_detail
+			audio#bg(src="media/bg3.mp3" autoplay loop)
+			.music
+				img(src="images/music-on.png")
+			img.light(src="images/light.png")
+			.wrapper_screen
+				img.screen(src="images/curtain1.png")
+				.wrapper_countdown
+					.circle
+					.num
+				.wrapper_p1
+					h2.title#title 《2015年 你我主演的电影》
+					.box 
+						p
+							i.director 导演 
+							span.director#director 微票儿
+						p
+							i.actor 主演 
+							span.actor#actor 用户名
+				.wrapper_p2
+					ul.poster#poster
+						li 
+							img#poster1(src="images/poster1.png")
+						li 
+							img#poster2(src="images/poster2.png")
+						li 
+							img#poster3(src="images/poster3.png")
+						li 
+							img#poster4(src="images/poster4.png")
+						li 
+							img#poster5(src="images/poster5.png")
+						li 
+							img#poster6(src="images/poster6.png")
+					.clear
+					.subtitle1
+						p.mb-15 嘿！正在盯着屏幕看的你
+						p.mb-40 我喜欢你已经很久了！
+						p.mb-15 第一次和你邂逅是在
+							span#time.ml-r-10 2015年12月15号17时12分
+						p 知道了你对
+							span#type.ml-r-10 爱情片
+							span 的情有独钟
+					.subtitle2
+						p.mb-15 记得 你在
+							span#time.ml-r-10 2015年12月15号17时12分
+						p.mb-30 取到
+							span#movie_name.ml-r-10 《北京爱情故事》
+							span 的那份小欣喜吗？
+						p.mb-15 我还帮你记下了
+						p.mb-15 
+							span#time.ml-r-10 2015年12月15号17时12分 
+							span#week.ml-r-10 周日
+						p.mb-30 
+							span#cinema.ml-r-10 明珠影院
+							span#room_num.ml-r-10 1号厅
+							span#row.ml-r-10 1排
+							span#seat_num.ml-r-10 6座
+						p 你在 影院里留下的感动......
+					.subtitle3
+						p.mb-10 你的 每一张订单
+						p.mb-20 都是 和我的银幕约定
+						p.mb-20 感谢 这一年来的默默相伴
+						p.mb-10 每场 90分钟的光影之旅
+						p.mb-20 都让彼此看到100分得绮丽新意
+						p.mb-10 相信 你与我之间的缘分不浅
+						p.mb-10 2015年 正在热映 的感动还未消失
+						p.mb-10 2016年 即将上映 的精彩马上开始......
+						a.button_watch(href="#")
+			.xiaopiao
+			a.download_app(href="#")
+			.remind_share
+			.wrapper_seat
+				img.floor(src="images/floor.png")
+				img.seat(src="images/seat.png")
+			.curtain
+			.logo
+block append headscript
+	script(src="js/bg-music.js")

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>《侏罗纪世界》万达IMAX39元</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no">
+	<meta content="telephone=no" name="format-detection">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body >
+		<header class="header">
+			<img src="images/banner.jpg" alt="">
+			<img src="images/banner1.jpg" alt="" class="banner1">
+			<img src="images/glass.png" alt="" class="glass">
+            <div class="title">
+                <img src="images/title.png">
+            </div>
+            <a class="buyButn" href="http://yx.wepiao.com/activitys/63/index.html">
+			<img src="images/blank.png" alt="" >
+			<img src="images/buyButn2.png" alt=""  class="buyButn2">
+            </a>
+            <div class="brand">
+                <img src="images/brand.png">
+            </div>
+            <div class="dinosaur">
+                <img src="images/dinosaur.png">
+            </div>
+            <div class="music" id="music"></div>
+		</header>
+        <script type="text/javascript" src="js/zepto.js"></script>
+        <script type="text/javascript" src="js/papp.js"></script>
+        <script src="js/wx.js"></script>
+        <script src="js/wxbridge.js"></script>
+        <script type="text/javascript" src="js/analytics.js"></script>
+        <script>
+            $(function () {
+                //音乐
+                papp.audio({
+                    target: ".music",
+                    src: "images/roar.mp3",
+                    preload: "auto",
+                    loop: false,
+                    autoPlay: true
+                });
+               papp.audio.play();
+                function playAudio() {
+
+                    $("header").addClass("current");
+                }
+
+                document.body.addEventListener('touchmove', function (event) {
+                    event.preventDefault();
+                }, false);
+                setTimeout(playAudio(), 1000);
+
+//                $("#click").click(function(){
+//                window.location.href="http://yx.wepiao.com/activitys/63/index.html";
+//            })
+            })
+
+        </script>
+        <!--微信分享-->
+        <script>
+            var URL= 'http://weixin.wepiao.com/huodong/wx/20150602/zhuluoji';
+            var share_img_url = URL+"/images/share.jpg";
+            WxBridge.share({
+                'imgUrl' : share_img_url, // 图片地址
+                'link' : window.location.href, // 链接地址
+                'title' : '《侏罗纪世界》万达IMAX39元独家超前预售，好座全开，等你来抢!', // 分享标题
+                'desc' : '《侏罗纪世界》39元抢IMAX3D，独家超前选座，就等你来~' // 分享内容
+            });
+
+        </script>
+
+</body></html>

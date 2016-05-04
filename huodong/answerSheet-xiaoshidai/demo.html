@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>demo</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .section{
+      position: relative;
+      width:100%;
+      height:100%;
+      overflow:hidden;
+    }
+    .num {
+      font-size: 26px;
+      color: #000;
+      font-weight: bold;
+    }
+
+    .desc {
+      font-size: 21px;
+      color: #000;
+    }
+    .box,.box1{
+      position: absolute;
+      top:0;
+      left:0;
+    }
+    .box1{
+      top:auto;
+      bottom:4%;
+    }
+    .butn {
+      display: inline-block;
+      width: 60px;
+      height: 20px;
+    }
+  </style>
+</head>
+
+<body>
+    <div id="fullpage">
+      <div class="section">
+        <img src="./images/cover-01.png" alt="">
+      </div>
+      <div class="section">
+        <img src="./images/pic01.jpg" alt="" class="bgImg">
+        <div class="box">
+          <div class="num">1</div>
+          <div class="desc">明明喜欢他，却悄悄走开消失不见</div>
+          <button class="butn butn-a" id="butnA" data-answer="A" >A</button>
+          <button class="butn butn-b" id="butnB" data-answer="B" >B</button>
+          <button class="butn butn-c" id="butnC" data-answer="C" >C</button>
+          <button class="butn butn-d" id="butnD" data-answer="D" >D</button>
+          <div class="answer"></div>
+        </div>
+
+      </div>
+      <div class="section " id="result">
+        <img src="images/resultBg01.jpg" alt="">
+        <div class="box1">
+          <div class="result">
+            <span>答对</span>
+            <span id="score"></span>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+    <script src="demo.js"></script>
+</body>
+
+</html>

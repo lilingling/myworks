@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="address=no">
+  <!--标题-->
+  <title>微票儿超级红包日</title>
+</head>
+<body>
+  <div id="lunbo"></div>
+</body>
+</html>
+    var list = [
+     // picture
+     {
+         content: '../images/movie-1.png'
+     },
+     // picture
+     {
+         content: '../images/movie-2.png'
+     },
+     // picture
+     {
+         content: '../images/movie-3.png'
+     },
+     // picture
+     {
+         content: '../images/movie-4.png'
+     },
+     // picture
+     {
+         content: '../images/movie-5.png'
+     }
+     ];
+
+    var S = new iSlider({
+     dom: document.getElementById('scroll'),
+     data: list,
+     isLooping: 1,
+     isOverspread: false,
+     animateTime: 800, // ms
+     plugins: [['zoompic', {zoomFactor: 3}]]
+    });

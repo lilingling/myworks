@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>假期趣发现</title>
+	<style type="text/css">
+		 @media only screen and (min-device-width:1080px) and (-webkit-min-device-pixel-ratio:2.5){
+			.typeText02{
+				top:6.8rem;
+			}
+			.anim-button02{
+				top:7.7rem;
+			}
+		 }
+		 @media only screen and (device-height:480px) and (-webkit-device-pixel-ratio:2){
+		 	.typeText02{
+				top:6.8rem;
+			}
+			.anim-button02{
+				top:7.7rem;
+			}
+		 }
+
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="mask mask_loading">
+	        <div class="loading">
+	            <img class="icon-loading" src="images/loading.gif">
+	            <i class="icon-process">loading...</i>
+	        </div>
+	    </div>
+	    <div class="orientation_set">
+	        <div><img src="images/orientation.png" width="50" alt="" class='translate'>
+	            <br>请将屏幕竖向浏览
+	        </div>
+	    </div>
+	    <img src="images/music-on.png" alt="" id="musicButton">
+		<section class="scene firstScene" id="scene_1">
+			<img class="p1_page" src="images/p1_page01.jpg">
+			<div class="text">
+				<p class="first">中秋2天,国庆7天!漫长的假期 </p>
+				<p class="second">你...!准备好了吗？</p>
+			</div>
+			<img src="images/btn.png" alt="" class="btn-1 btn-down">
+		</section>
+		<section class="scene" id="scene_2">
+			<img src="images/night.jpg" alt="" class="night">
+			<img src="images/day.jpg" alt="" class="day">
+			<img src="images/tuzi2/day1/1.png" alt="" class="tuzi-day1 tuzi">
+			<img src="images/tuzi2/day2/1.png" alt="" class="tuzi-day2 tuzi">
+			<img src="images/tuzi2/day3/1.png" alt="" class="tuzi-day3 tuzi">
+			<img src="images/tuzi2/day4/1.png" alt="" class="tuzi-day4 tuzi">
+			<img src="images/tuzi2/day5/1.png" alt="" class="tuzi-day5 tuzi">
+			<img src="images/tuzi2/day6/1.png" alt="" class="tuzi-day6 tuzi">
+			<img src="images/tuzi2/day7/1.png" alt="" class="tuzi-day7 tuzi">
+
+			<img src="images/room.png" alt="" class="room">
+			<p class="instro day1">
+				第一天，睡到自然醒
+			</p>
+			<p class="instro day2">
+				第二天，没人约我
+			</p>
+			<p class="instro day3">
+				第三天，三天没洗澡
+			</p>
+			<p class="instro day4">
+				第四天，爸妈嫌弃我
+			</p>
+			<p class="instro day5">
+				第五天，一个剧看八遍
+			</p>
+			<p class="instro day6">
+				第六天，光吃不动，胖了5斤
+			</p>
+			<p class="instro day7">
+				第七天，哎呀，我去！明天就要上班了！
+			</p>
+			<img src="images/btn.png" alt="" class="btn-1 btn-down" style="z-index: 1000">
+		</section>
+		<section class="scene" id="scene_3">
+			<img src="images/blank.png" alt="" class="light">
+			<img src="images/blank.png" alt="" class="text03">
+			<a href="#" class="anim-button01 btn-down" src="">
+				<img src="images/button01.png">
+			</a>
+		</section>
+		<section class="scene" id="scene_4">
+			<div class="mask01"></div>
+			<!-- <div class="mask02"></div> -->
+			<div class="subwayBg">
+				<img src="images/subway1.jpg" alt="" class="subway">
+				<img class="tuzi4" src="images/tuzi4/1.png">
+				<img src="images/xiaopiao.png" alt="" class="xiaopiao">
+				<img src="images/children.png" alt="" class="children">
+				<img src="images/tuzi4/5.png" alt="" class="tuzimove">
+			</div>
+			<img src="images/btn.png" alt="" class="btn-1 btn-down" style="z-index: 1000;display:none">	
+		</section>
+		<section class="scene p5_page" id="scene_5">
+			<img class="tuzi5" src="images/tuzi5/1.png">
+			<div class="typeText02">从今天开始，不做一只无聊的兔子!不过一天无聊的假期，生活精彩等你趣发现 </div>
+			<a href="http://wx.wepiao.com/explor.html?startFrom=1" class="anim-button02">
+				<img src="images/button.png">
+			</a>
+		</section>
+		
+	</div>
+	<script type="text/javascript" src="js/zepto.js"></script>
+	<script type="text/javascript" src="js/wx.js"></script>
+	<script type="text/javascript" src="js/wxbridge.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+
+	
+	<script type="text/javascript">
+		//适配
+		$(window).on('resize', function () {
+		var width = document.documentElement.clientWidth;
+		$('html').css('font-size', (width / 640 * 100) + 'px');
+		}).triggerHandler('resize');
+
+		//     google analytics
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-58583546-8', 'auto');
+    ga('send', 'pageview');
+
+//    微信分享
+    var URL = 'http://weixin.wepiao.com/huodong/wx/20150925/zhongqiuqu';
+    // var URL = 'http://weixin.wepiao.com/tuzi20150923';
+    var share_img_url = URL + "/images/share.jpg";
+    WxBridge.share({
+        'imgUrl': share_img_url, // 图片地址
+        'link': window.location.href, // 链接地址
+        'title': '作为一只不去旅游的兔子，假期好无聊……', // 分享标题
+        'desc': '才不要一个人无聊呢' // 分享内容
+    });
+	
+  	</script>
+</body>
+</html>

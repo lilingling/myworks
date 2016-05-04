@@ -1,0 +1,469 @@
+.bg{
+    background:url("../images/bg.jpg") no-repeat;
+    background-size:cover;
+}
+.box{
+    width:100%;
+    background-size: cover;
+    overflow:hidden;
+    margin:0 auto;
+}
+.currentScene .dinosaurHatch{
+    background-image: url("../images/dinosaur1.png");
+    -webkit-animation: hatch .5s steps(4) 1.5s 1 forwards;
+}
+.questionMark,.questionMark1{
+    margin:0 auto;
+    opacity: 0;
+    -webkit-animation-delay: 1.5s;
+    -webkit-animation-duration: .8s;
+    -webkit-transform-origin: 0 50%;
+    -webkit-animation-fill-mode: forwards;
+
+}
+.questionMark{ width:19%;}
+.questionMark1{ width:15%;}
+.currentScene .questionMark,.currentScene .questionMark1{-webkit-animation-name: swing;}
+@-webkit-keyframes swing{
+    20% {
+        opacity: 1;
+        -webkit-transform: rotate3d(0, 0, 1, 15deg);
+    }
+
+    40% {
+        opacity: 1;
+        -webkit-transform: rotate3d(0, 0, 1, -10deg);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: rotate3d(0, 0, 1, 5deg);
+    }
+
+    80% {
+        opacity: 1;
+        -webkit-transform: rotate3d(0, 0, 1, -5deg);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    }
+}
+.p1-text-02,.p2-text-01,.p3-text-01,.p4-text-01,.oneEgg,.p5-text-01,.p6-text-01{
+    -webkit-transition-delay: .5s;
+}
+.p2-text-02,.p3-text-02,.p4-text-02,.p6-text-02{
+    position: absolute;
+    top:0;
+    z-index: 2;
+    opacity: 0;
+    -webkit-animation-delay: 1.5s;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+}
+.p5-text-02{-webkit-transition-delay: 1s;}
+.p6-text-02{-webkit-animation-delay: .8s;}
+.currentScene .p2-text-02,.currentScene .p3-text-02,.currentScene .p4-text-02,.currentScene .p6-text-02{
+    -webkit-animation-name: zoomIn;
+}
+
+@-webkit-keyframes zoomIn{
+    0% {
+        opacity: 1;
+        -webkit-transform: scale3d(1, 1, 1) ;
+    }
+    50% {
+        opacity: 1;
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) ;
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale3d(1, 1, 1) ;
+
+    }
+
+}
+.egg{
+    background-image: url("../images/egg.png");
+    margin-top:-40px;
+    /*-webkit-transition-delay: .5s;*/
+}
+.startEggHeat.egg{
+    -webkit-animation: eggHeat 1s steps(4) 0s 1 forwards;
+}
+.fire{
+    background-image: url("../images/fire.png");
+    margin-top:-100px;
+    opacity: 0;
+}
+.startHeat.fire{
+    -webkit-animation: fireHeat 1s steps(4) 0s 1 forwards;
+}
+
+.startEggHeat.egg{
+    -webkit-animation: eggHeat 1s steps(4) 0s 1 forwards;
+}
+.heatButn,.buryButn,.polishButn{
+    width:67%;
+    margin:0 auto;
+    margin-top:30px;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-delay: 1.3s;
+    -webkit-animation-fill-mode: forwards;
+    background-size: cover;
+    -webkit-tap-highlight-color:rgba(0,0,0,.0);
+
+}
+.buryButn{
+    background-image: url('../images/buryButn.png');
+}
+.polishButn{
+    width:63%;
+    background-image: url('../images/polishButn.png');
+    margin-top:0;
+}
+.currentScene .heatButn,.currentScene .buryButn,.currentScene .polishButn{
+    -webkit-animation-name: tada;
+}
+@-webkit-keyframes tada {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(1, 1, 1);
+    }
+
+    10%, 20% {
+        opacity: 1;
+        -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    }
+
+    30%, 50%, 70%, 90% {
+        opacity: 1;
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+
+    40%, 60%, 80% {
+        opacity: 1;
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: scale3d(1, 1, 1);
+    }
+}
+@-webkit-keyframes hatch{
+    100%{ background-position:133% 0 }
+}
+@-webkit-keyframes eggHeat{
+    100%{ background-position:-400% 0 }
+}
+@-webkit-keyframes fireHeat{
+    0%{opacity: 1}
+    100%{
+        opacity: 1;
+        background-position:-400% 0 }
+}
+
+.startEggHide.oneEgg{
+    -webkit-animation-delay: 1.5s;
+    -webkit-animation-name: eggHide;
+    -webkit-animation-duration: .2s;
+    -webkit-animation-fill-mode: forwards;
+}
+.eggGrow{
+    background-image: url("../images/eggGrow.png");
+    -webkit-transition-delay: .5s;
+    margin-top: -36%;
+    opacity: 0;
+}
+.startGrow.eggGrow{
+     -webkit-animation: bury 1.5s steps(4) 0s 1 forwards;
+ }
+.startWind.eggGrow{
+    -webkit-animation: wind-rain 1s steps(5) 0s 1 forwards;
+}
+
+@-webkit-keyframes bury{
+    0%{
+        opacity: 1;
+    }
+    100%{ opacity: 1;
+        background-position:-400% 0 }
+}
+@-webkit-keyframes wind-rain{
+    0%{
+        opacity: 1;
+        background-image: url("../images/eggGrow1.png");
+    }
+    100%{
+        opacity: 1;
+        background-position:-500% 0;
+        background-image: url("../images/eggGrow1.png");}
+}
+@-webkit-keyframes eggHide{
+    0%{
+        opacity: 1;
+    }
+    100%{ opacity: 0;
+       }
+}
+
+.steps{
+    width:90%;
+    margin:0 auto;
+}
+.steps li{
+    float:left;
+    width:50%;
+    background-image: url('../images/steps.png');
+    background-size: 200%;
+}
+.step1{
+    background-position: 0 0;
+}
+.step2{
+    background-position: right 0
+}
+.step3{
+    background-position: 0 bottom;;
+}
+.step4{
+    background-position: right bottom;
+}
+
+.steps_text{
+    opacity: 0;
+}
+.p5-text-03{
+    -webkit-transition-delay: 2s;
+    -webkit-transition-duration: 1.2s;
+}
+.colon{
+    width:6.3%;
+    position: absolute;
+    bottom:10%;
+
+}
+.colon1{
+    right:26.3%;
+    -webkit-transition-delay: 3.5s;
+}
+.colon2{
+    right:18.8%;
+    -webkit-transition-delay: 3.7s;
+}
+.colon3{
+    right:11.3%;
+    -webkit-transition-delay: 3.9s;
+}
+.eggBeat{
+    background-image: url('../images/eggBeat2.png');
+    background-size:cover;
+}
+.startBeat.eggBeat{
+    -webkit-animation: eggBeat 1.5s steps(5) 0s 1 forwards,eggHide 0s linear 1.8s forwards;;
+}
+@-webkit-keyframes eggBeat{
+    0%{
+        opacity: 1;
+    }
+    100%{ opacity: 1;
+        background-position:-500% 0;
+
+    }
+}
+
+.butnBox{
+    position: absolute;
+    top:40.5%;
+    left:50%;
+    width:58.8%;
+    -webkit-transform: translateX(-50%);
+    display:none;
+    z-index: 999999;
+
+
+}
+.seeDinosaurButn,.hatchButn{
+    display: block;
+    background-size:cover;
+    background-image: url('../images/p7-butn.png');
+}
+.seeDinosaurButn{ background-position: 0 0;}
+.hatchButn{ background-position: 0 bottom;}
+.startShow.butnBox{
+    -webkit-animation:fadeIn 1s linear 1.9s forwards;
+}
+.logo{opacity: 0;}
+.startShow.logo{
+    -webkit-animation:fadeIn 1s linear 3s forwards;
+}
+@-webkit-keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{ opacity: 1;
+    }
+}
+.magicLamp{
+    background-image:url('../images/magicLamp1.png');
+    background-size:cover;
+}
+.startPolish.magicLamp{
+    -webkit-animation: polishLamp  .5s steps(1) 0s 1 forwards;
+}
+@-webkit-keyframes polishLamp {
+    100%{
+        background-position: -100% 0;
+    }
+ }
+
+.startCall.magicLamp{
+    -webkit-animation: call-wizard 1s steps(2) 0s 1 forwards;
+}
+.startCurse.magicLamp{
+    -webkit-animation: curse 1.5s steps(4) 0s 1 forwards;
+}
+.noanimation .heatButn,
+.noanimation .buryButn,
+.noanimation .polishButn{
+    -webkit-animation: none;
+}
+@-webkit-keyframes call-wizard{
+    0%{
+        opacity: 1;
+        background-image: url("../images/magicLamp2.png");
+    }
+    100%{
+        opacity: 1;
+        background-position:-200% 0;
+        background-image: url("../images/magicLamp2.png");}
+}
+@-webkit-keyframes curse{
+    0%{
+        opacity: 1;
+        background-image: url("../images/magicLamp3.png");
+    }
+    100%{
+        opacity: 1;
+        background-position:-400% 0;
+        background-image: url("../images/magicLamp3.png");}
+}
+.failure{
+    opacity: 0;
+    position:absolute;
+    top:0;
+    left:0;
+    pointer-events: none;
+    -webkit-animation-duration: .5s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-transform:scale(1,1);
+}
+.showFailure.failure1,.showFailure.failure2{
+    -webkit-animation-name:failure;
+    -webkit-animation-delay: 1.6s;
+}
+
+.showFailure.failure3{
+    -webkit-animation-name:failure;
+    -webkit-animation-delay: 2s;
+}
+@-webkit-keyframes failure {
+    0%{
+        opacity: 0;
+        -webkit-transform:scale(2,2);
+    }
+
+    100%{
+        opacity: 1;
+        -webkit-transform:scale(1,1);
+    }
+ }
+
+.slide-arrow {
+    position: absolute;
+    width: 10%;
+    /*-webkit-animation: jump .8s linear 0 infinite alternate;*/
+    -webkit-animation-fill-mode: forwards;
+    opacity: 0;
+    z-index:99;
+    bottom: 3%;
+    left: 50%;
+}
+.currentScene .slide-arrow1,.currentScene .slide-arrow5,.currentScene .slide-arrow6{-webkit-animation: jump .8s linear 0 infinite alternate;}
+.startSlide.slide-arrow2,.startSlide.slide-arrow3,.startSlide.slide-arrow4{-webkit-animation: jump .8s linear 0 infinite alternate;}
+@-webkit-keyframes jump{
+    0%{
+        opacity: 1;
+        -webkit-transform:translateY(2%) translateX(-50%);
+    }
+    50%{
+        opacity: 1;
+        -webkit-transform:translateY(-3px) translateX(-50%);
+    }
+    100%{
+        opacity: 1;
+        -webkit-transform:translateY(0%) translateX(-50%);
+    }
+
+
+}
+/*适配*/
+@media only screen and (device-height:416px) {
+    .buryButn,.heatButn,.polishButn{
+        width: 50%;
+    }
+    .buryButn{ margin-top: -15%;}
+    .heatButn{ margin-top: -4%;}
+    .polishButn{ margin-top: -7%;}
+    .steps{
+        width:73%;
+    }
+    .steps_text{ width:67% !important;
+        margin:0 auto;
+    }
+    .p1-text-01,.p1-text-02,.p5-text-01,.p5-text-02,.p5-text-03{
+        width:80%;
+        margin:0 auto;
+    }
+
+    .questionMark {
+        width:12%;
+    }
+    .colon{bottom:5%;}
+    .magicLamp{
+        margin-top:-14%;
+    }
+    .logo{margin-top:-30%;}
+    .butnBox{width:50%;}
+}
+@media only screen and (min-device-width:1080px) and (-webkit-min-device-pixel-ratio: 2.5){
+    .buryButn,.heatButn,.polishButn{
+        width: 50%;
+    }
+    .buryButn{ margin-top: -15%;}
+    .heatButn{ margin-top: -6%;}
+    .polishButn{ margin-top: -7%;}
+    .steps{
+        width:73%;
+    }
+    .steps_text{ width:67% !important;
+        margin:0 auto;
+    }
+    .p1-text-01,.p1-text-02,.p5-text-01,.p5-text-02,.p5-text-03{
+        width:80%;
+        margin:0 auto;
+    }
+
+    .questionMark {
+        width:12%;
+    }
+    .colon{bottom:7%;}
+    .magicLamp{
+        margin-top:-14%;
+    }
+    .logo{margin-top:-30%;}
+    .butnBox{width:50%;}
+}
+

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>恐龙复活记</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=d  evice-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script>
+        var eventsConfig = {
+                    'preLoadImgs': [
+                        'images/loading.gif',
+                        "images/bg.jpg",
+                        'images/dinosaur1.png',
+                        'images/egg.png',
+                        'images/egg1.png',
+                        'images/eggBeat1.png',
+                        'images/eggBeat2.png',
+                        'images/eggGrow.png',
+                        'images/eggGrow1.png',
+                        'images/failure.png',
+                        'images/fire.png',
+                        'images/magicLamp1.png',
+                        'images/magicLamp2.png',
+                        'images/magicLamp3.png',
+                        'images/steps.png',
+                        'images/steps1.png'
+                    ],
+            'cycle' : 'down'
+                }
+    </script>
+</head>
+<body>
+<div class="mask mask_loading">
+    <div class="loading">
+        <img class="icon-loading" src="images/loading.gif" >
+        <i class="text-loading">恐龙复活记...</i>
+    </div>
+</div>
+<!-- 请将屏幕竖向浏览：start -->
+<div class="orientation_set">
+    <div><img src="images/orientation.png" width="50" alt="" class='translate'>
+        <br>请将屏幕竖向浏览</div>
+</div>
+<!-- 请将屏幕竖向浏览：end -->
+
+<div id="slide">
+    <section id="scene_1" class="scene bg firstScene">
+        <div class="box dinosaurHatch">
+            <img src="images/blank1.png">
+        </div>
+        <div class="p1-text-01 movein-top">
+            <img src="images/p1-text-01.png">
+        </div>
+        <div class="p1-text-02 movein-bottom">
+            <img src="images/p1-text-02.png">
+        </div>
+        <div class="questionMark">
+            <img src="images/questionMark.png">
+        </div>
+        <div class="slide-arrow slide-arrow1"><img src="images/arrow.png" alt=""></div>
+    </section>
+
+    <section id="scene_2" class="scene bg ">
+        <div class="p2-text-01 show">
+            <img src="images/p2-text-01.png">
+        </div>
+        <div class="p2-text-02">
+            <img src="images/p2-text-02.png">
+        </div>
+        <div class="box egg ">
+            <img src="images/blank.png">
+        </div>
+        <div class="box fire">
+            <img src="images/blank2.png">
+        </div>
+        <div class="heatButn " id="heatButn">
+            <img src="images/heatButn.png">
+        </div>
+        <div class="failure failure1">
+            <img src="images/failure.png">
+        </div>
+        <div class="slide-arrow slide-arrow2"><img src="images/arrow.png" alt=""></div>
+    </section>
+
+    <section id="scene_3" class="scene bg ">
+        <div class="p3-text-01 show">
+            <img src="images/p3-text-01.png">
+        </div>
+        <div class="p3-text-02">
+            <img src="images/p3-text-02.png">
+        </div>
+        <div class="box oneEgg ">
+            <img src="images/egg1.png">
+        </div>
+        <div class="box eggGrow">
+            <img src="images/blank3.png">
+        </div>
+        <div class="buryButn " id="buryButn">
+            <img src="images/blankButn.png">
+        </div>
+        <div class="failure failure2">
+            <img src="images/failure.png">
+        </div>
+        <div class="slide-arrow slide-arrow3"><img src="images/arrow.png" alt=""></div>
+    </section>
+
+    <section id="scene_4" class="scene bg ">
+        <div class="p4-text-01 show">
+            <img src="images/p4-text-01.png">
+        </div>
+        <div class="p4-text-02">
+            <img src="images/p4-text-02.png">
+        </div>
+        <div class="box magicLamp">
+            <img src="images/lampBlank.png">
+        </div>
+        <div class="polishButn " id="polishButn">
+            <img src="images/blankButn.png">
+        </div>
+        <div class="failure failure3">
+            <img src="images/failure.png">
+        </div>
+        <div class="slide-arrow slide-arrow4"><img src="images/arrow.png" alt=""></div>
+    </section>
+
+    <section id="scene_5" class="scene bg">
+        <div class="p5-text-01 movein-left">
+            <img src="images/p5-text-01.png">
+        </div>
+        <div class="p5-text-02 movein-left">
+            <img src="images/p5-text-02.png">
+        </div>
+        <div class="questionMark1 ">
+            <img src="images/questionMark1.png">
+        </div>
+        <div class="p5-text-03 show">
+            <img src="images/p5-text-03.png">
+        </div>
+        <div class="colon colon1 show">
+            <img src="images/colon.png">
+        </div>
+        <div class="colon colon2 show">
+            <img src="images/colon.png">
+        </div>
+        <div class="colon colon3 show">
+            <img src="images/colon.png">
+        </div>
+        <div class="slide-arrow slide-arrow5"><img src="images/arrow.png" alt=""></div>
+    </section>
+
+    <section id="scene_6" class="scene bg">
+        <div class="p6-text-01 ">
+            <img src="images/p6-text-01.png">
+        </div>
+        <div class="p6-text-02">
+            <img src="images/p6-text-02.png">
+        </div>
+        <div class="instruction">
+            <img src="images/instruction.png">
+        </div>
+        <ul class="steps " >
+            <li class="step1">
+                <img src="images/stepBlank.png">
+            </li>
+            <li class="step2">
+                <img src="images/stepBlank.png">
+            </li>
+            <li class="step3">
+                <img src="images/stepBlank.png">
+            </li>
+            <li class="step4">
+                <img src="images/stepBlank.png">
+            </li>
+        </ul>
+        <div class="clear"></div>
+        <img src="" class="steps_text" alt="">
+        <div class="slide-arrow slide-arrow6"><img src="images/arrow.png" alt=""></div>
+    </section>
+
+    <section id="scene_7" class="scene bg">
+        <div class="p7-text-01 ">
+            <img src="images/p7-text-01.png">
+        </div>
+        <div class="eggBeat" id="beat">
+            <img src="images/beatBlank.png">
+        </div>
+        <div class="butnBox">
+        <a href="http://wx.wepiao.com/movie_detail.html?movie_id=5577&from=4000000000" class="seeDinosaurButn" id="seeDinosaurButn">
+            <img src="images/butnBlank.png">
+        </a>
+        <a href="http://wap.koudaitong.com/v2/goods/1fjt4u4nt?from=kdt&kdtfrom=&spm=sc2142496_h1686616" class="hatchButn">
+            <img src="images/butnBlank.png">
+            </a>
+        </div>
+        <div class="logo">
+            <img src="images/logo.png">
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript" src="js/zepto.js"></script>
+<script type="text/javascript" src="js/fx.js"></script>
+<script type="text/javascript" src="js/fx_methods.js"></script>
+<script type="text/javascript" src="js/touch.js"></script>
+<script src="js/wx.js"></script>
+<script src="js/wxbridge.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/analytics.js"></script>
+
+<!-- google analytics -->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-58583546-8', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+<!--微信分享-->
+<script>
+    var URL = 'http://weixin.wepiao.com/huodong/wx/20150610/jurassic';
+    var share_img_url = URL + "/images/share.jpg";
+    WxBridge.share({
+        'imgUrl': share_img_url, // 图片地址
+        'link': window.location.href, // 链接地址
+        'title': '复活一只恐龙，需要几步？', // 分享标题
+        'desc': '三分钟科普，恐龙复活记' // 分享内容
+    });
+
+    //    加温
+    $("#heatButn").on('tap',function(){
+        $(".fire").addClass( 'startHeat' );
+        $(".egg").addClass( 'startEggHeat' );
+        $('#scene_2 .failure').addClass('showFailure');
+        $("#scene_2").addClass('noanimation');
+        setTimeout(function(){
+            $("#heatButn").hide();
+            $('.slide-arrow2').addClass('startSlide');
+        },2000)
+    });
+
+    //    埋下并营养
+    var $buryButn=$("#buryButn");
+    $buryButn.on('tap',function(){
+        $(".oneEgg").addClass( 'startEggHide' );
+        $(".eggGrow").addClass( 'startGrow' );
+        setTimeout(function(){
+            $buryButn.css('background-image','url("images/nutritionButn.png")')
+            $buryButn.attr('id','nutritionButn');
+        },700);
+    });
+    $("#scene_3").delegate("#nutritionButn","tap",function(){
+        $('.eggGrow').addClass('startWind');
+        $('#scene_3 .failure').addClass('showFailure')
+        $("#scene_3").addClass('noanimation');
+        setTimeout(function(){
+            $('#nutritionButn').hide();
+            $('.slide-arrow3').addClass('startSlide');
+        },2000)
+    });
+
+    //    分4步点击
+    var $step=$('.steps li');
+    var len=$step.length;
+    var $steps_text=$('.steps_text');
+
+    var steps=function(index){
+        $step.eq(index).css('background-image','url(images/steps1.png)');
+        $steps_text.attr('src','images/p6-text-'+index+'.png');
+        $steps_text.fadeIn(1000);
+    };
+    $step.on('tap',function(){
+        var index = $(this).index();
+        steps(index);
+
+    });
+
+
+    //神灯
+    //1.擦亮神灯
+    var $polishButn=$('#polishButn');
+    var $magicLamp=$('.magicLamp');
+    $polishButn.on('tap',function(){
+       // if($(this).attr("id")!="polishButn")return;
+        $magicLamp.addClass( 'startPolish');
+        setTimeout(function(){
+            $polishButn.css('background-image','url("images/call-wizardButn.png")');
+            $polishButn.attr('id','callWizardButn');
+            $polishButn.unbind("tap");
+        },700);
+
+    });
+    // 2.召唤巫师
+    $("#scene_4").delegate("#callWizardButn","tap",function(){
+        $('.magicLamp').addClass('startCall');
+        var $callWizardButn=$('#callWizardButn');
+        setTimeout(function(){
+            $callWizardButn.css('background-image','url("images/curseButn.png")')
+            $callWizardButn.attr('id','curseButn');
+            $polishButn.unbind("tap");
+        },1000);
+    });
+
+    // 3.妈咪妈咪哄
+    $("#scene_4").delegate("#curseButn","tap",function(){
+        $('.magicLamp').addClass('startCurse');
+        $('#scene_4 .failure').addClass('showFailure');
+        $("#scene_4").addClass('noanimation');
+        setTimeout(function(){
+            $polishButn.hide();
+            $('.slide-arrow4').addClass('startSlide');
+        },2000)
+    });
+
+
+    //  敲蛋
+    var $beat=$('#beat');
+    var $butnBox=$('.butnBox');
+    var $logo=$('.logo');
+    $beat.on('tap',function(){
+        $beat.addClass( 'startBeat');
+//        $butnBox.addClass( 'startShow');
+        $logo.addClass('startShow');
+        setTimeout(function(){
+            $butnBox.fadeIn(1000);
+        },2000)
+
+    });
+</script>
+
+</body>
+</html>

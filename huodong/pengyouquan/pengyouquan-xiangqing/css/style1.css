@@ -1,0 +1,178 @@
+/*----public css start-----*/
+sub, sup {
+    line-height: 0;
+}
+body, h1, h2, h3, h4, h5, h6, dl, dt, dd, ul, ol, li, th, td, p, blockquote, pre, form, fieldset, legend, input, button, textarea, hr {
+    margin: 0;
+    padding: 0;
+}img
+ table {
+     border-spacing: 0;
+     border-collapse: collapse;
+ }
+fieldset, img {
+    border: 0;
+}
+input, textarea {
+    outline-style: none;
+}
+textarea {
+    resize: none;
+}
+address, caption, cite, code, dfn, em, i, th, var {
+    font-weight: normal;
+    font-style: normal;
+}
+html, body {
+    font-size: 62.5%;
+    font-family:"Microsoft YaHei","Helvetica";
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+
+}
+ul li{list-style: none;}
+.clear{clear:both}
+a,li{-webkit-tap-highlight-color:rgba(0,0,0,.0);}
+img{  display: block;  width:100%;}
+.orientation_set{display:none}
+@media screen and (orientation:landscape){
+    .orientation_set{
+        display:block;
+        position:fixed;
+        top:0;
+        left:0;
+        color:#fff;
+        width:100%;
+        height:100%;
+        background:#fbe5c0;
+        text-align:center;
+        display:-webkit-box;
+        -weibit-box-pack:center;
+        -webkit-box-align:center;
+        z-index:999;
+        font-size:14px;
+        line-height:2em;
+        font-family:"Microsoft YaHei"
+    }
+    @-webkit-keyframes zhuan{
+        0%{
+            -webkit-transform:rotate(0deg);
+            opacity:1}
+        50%{
+            -webkit-transform:rotate(-90deg);
+            opacity:1
+        }
+        100%{
+            -webkit-transform:rotate(0deg);
+            opacity:1
+        }}
+    .orientation_set img{
+        width:10%;
+        display:inline-block;
+        -webkit-animation:zhuan 1.5s .3s infinite
+    }
+    .orientation_set>div{width:100%}}
+/*----public css end-----*/
+
+
+.wrap{
+    width:100%;
+    background-color: #fbe5c0;
+    overflow:hidden;
+    font-size:1.2rem;
+}
+.banner,.box,.movie,.bottom{
+    position:relative;
+    width:100%;
+}
+.text{
+    position:absolute;
+    top:68%;
+    left:50%;
+    -webkit-transform:translateX(-50%);
+    width:85%;
+    height:auto;
+    color:#000101;
+    text-align: center;
+    z-index:99;
+
+}
+.instructions{
+    position:absolute;
+    top: 89%;
+    width:29.1%;
+    left:50%;
+    -webkit-transform:translateX(-50%);
+    font-size:1.2rem;
+    font-weight: bold;
+    text-decoration: underline;
+    color:#000101;
+}
+.text1{
+    color:#060001;
+    text-align: left;
+    background-image: url('../images1/title.png'),url('../images1/box1.png');
+    background-position: 0 0, 0 20%;
+    background-repeat: no-repeat,  repeat-y;
+    background-size: 100% auto,  100% auto;
+    padding: 11% 14%;
+    width:100%;
+    box-sizing: border-box;
+
+}
+.text1 p{
+    margin-top:5px;
+}
+.text1 p:first-child{margin-top:0px;}
+.button,.button1,.button2{
+    display: block;
+    width:30.8%;
+    position:absolute;
+    bottom:5%;
+    right:19.2%;
+    background:url('../images1/butn.png') no-repeat;
+    background-size:cover;
+}
+.button-01{background-position: 0 0;}
+.button-02{background-position: 0 50%;bottom:10%;}
+.button-03{
+    bottom:11%;
+    background-position: 0 100%;
+}
+.qiangkong,.xuanzuo{
+    display: block;
+    width:30.8%;
+    position:absolute;
+    bottom:10%;
+    right:19.2%;
+}
+@media only screen and (min-device-width:541px){
+    .text{font-size:1.8rem}
+    .text1{font-size:1.8rem}
+    .instructions{font-size:1.8rem}
+}
+@media only screen and (max-device-width:540px){
+    .text{font-size:1.6rem}
+    .text1{font-size:1.4rem}
+    .instructions{font-size:1.6rem}
+}
+@media only screen and (max-device-width:440px){
+    .text{font-size:1.4rem}
+    .text1{font-size:1.2rem}
+    .instructions{font-size:1.4rem}
+}
+@media only screen and (max-device-width:385px){
+    .text{font-size:1.2rem}
+    .instructions{font-size:1.2rem}
+}
+@media only screen and (max-device-width:320px){
+    .text{width:88%;font-size:1.2rem}
+    .instructions{font-size:1.2rem}
+}
+@media only screen and (min-device-width:1080px) and (-webkit-min-device-pixel-ratio:2.5){
+    .text{font-size:1.4rem}
+}
+
+
+
+
